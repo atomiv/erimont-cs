@@ -7,5 +7,6 @@ sudo: required
 dist: xenial
 
 script:
+    - cd src
     - dotnet restore
-    - dotnet build
+    - dotnet build -c Release
