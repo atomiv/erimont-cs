@@ -4,3 +4,8 @@ solution: src/Optivem.Northwind.sln
 dotnet: 2.2
 mono: none
 sudo: required
+dist: xenial
+
+script:
+    - dotnet restore
+    - dotnet build
