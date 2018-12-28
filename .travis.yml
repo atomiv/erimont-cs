@@ -3,3 +3,4 @@ solution: src/Optivem.Northwind.sln
 
 dotnet: 2.2
 mono: none
+sudo: required
