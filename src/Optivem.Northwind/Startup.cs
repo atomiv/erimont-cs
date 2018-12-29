@@ -15,6 +15,8 @@ namespace Optivem.Northwind
 {
     public class Startup
     {
+        private const string NorthwindContextConnectionStringKey = "Northwind";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,8 +28,8 @@ namespace Optivem.Northwind
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
-            var connection = @"Data Source=DESKTOP-FO7G5EB;Initial Catalog=Northwind;Integrated Security=True";
+            
+            var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);
             services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(connection));
         }
 
