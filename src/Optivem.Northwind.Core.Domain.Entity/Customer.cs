@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Optivem.Northwind.Core.Domain.Entity
 {
-    public partial class Customers
+    public partial class Customer
     {
-        public Customers()
+        public Customer()
         {
             CustomerCustomerDemo = new HashSet<CustomerCustomerDemo>();
-            Orders = new HashSet<Orders>();
+            Orders = new HashSet<Order>();
         }
 
         public string CustomerId { get; set; }
@@ -24,6 +24,6 @@ namespace Optivem.Northwind.Core.Domain.Entity
         public string Fax { get; set; }
 
         public virtual ICollection<CustomerCustomerDemo> CustomerCustomerDemo { get; set; }
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

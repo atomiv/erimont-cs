@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Optivem.Northwind.Core.Domain.Entity
 {
-    public partial class Employees
+    public partial class Employee
     {
-        public Employees()
+        public Employee()
         {
-            EmployeeTerritories = new HashSet<EmployeeTerritories>();
-            InverseReportsToNavigation = new HashSet<Employees>();
-            Orders = new HashSet<Orders>();
+            EmployeeTerritories = new HashSet<EmployeeTerritory>();
+            InverseReportsToNavigation = new HashSet<Employee>();
+            Orders = new HashSet<Order>();
         }
 
         public int EmployeeId { get; set; }
@@ -31,9 +31,9 @@ namespace Optivem.Northwind.Core.Domain.Entity
         public int? ReportsTo { get; set; }
         public string PhotoPath { get; set; }
 
-        public virtual Employees ReportsToNavigation { get; set; }
-        public virtual ICollection<EmployeeTerritories> EmployeeTerritories { get; set; }
-        public virtual ICollection<Employees> InverseReportsToNavigation { get; set; }
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual Employee ReportsToNavigation { get; set; }
+        public virtual ICollection<EmployeeTerritory> EmployeeTerritories { get; set; }
+        public virtual ICollection<Employee> InverseReportsToNavigation { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Optivem.Northwind.Core.Domain.Entity
 {
-    public partial class OrderDetails
+    public partial class OrderDetail
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }
@@ -11,7 +11,7 @@ namespace Optivem.Northwind.Core.Domain.Entity
         public short Quantity { get; set; }
         public float Discount { get; set; }
 
-        public virtual Orders Order { get; set; }
-        public virtual Products Product { get; set; }
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

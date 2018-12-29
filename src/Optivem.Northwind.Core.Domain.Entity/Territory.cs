@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Optivem.Northwind.Core.Domain.Entity
 {
-    public partial class Territories
+    public partial class Territory
     {
-        public Territories()
+        public Territory()
         {
-            EmployeeTerritories = new HashSet<EmployeeTerritories>();
+            EmployeeTerritories = new HashSet<EmployeeTerritory>();
         }
 
         public string TerritoryId { get; set; }
@@ -15,6 +15,6 @@ namespace Optivem.Northwind.Core.Domain.Entity
         public int RegionId { get; set; }
 
         public virtual Region Region { get; set; }
-        public virtual ICollection<EmployeeTerritories> EmployeeTerritories { get; set; }
+        public virtual ICollection<EmployeeTerritory> EmployeeTerritories { get; set; }
     }
 }

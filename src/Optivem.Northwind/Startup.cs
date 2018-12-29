@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Optivem.Northwind.Core.Application.Service;
+using Optivem.Northwind.Core.Domain.Repository;
 using Optivem.Northwind.Infrastructure.Repository;
 
 namespace Optivem.Northwind
@@ -31,6 +33,13 @@ namespace Optivem.Northwind
             
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);
             services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(connection));
+
+            // Unit of work
+            services.AddScoped<INorthwindUnitOfWork, NorthwindUnitOfWork>();
+
+            // Application services
+            services.AddScoped<ISupplierService, SupplierService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

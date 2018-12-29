@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Optivem.Northwind.Core.Domain.Entity
 {
-    public partial class CustomerDemographics
+    public partial class CustomerDemographic
     {
-        public CustomerDemographics()
+        public CustomerDemographic()
         {
             CustomerCustomerDemo = new HashSet<CustomerCustomerDemo>();
         }
