@@ -1,4 +1,5 @@
 ﻿using Optivem.Northwind.Core.Domain.Entity;
+using Optivem.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Core.Domain.Repository
 {
-    public interface ISupplierRepository
+    public interface ISupplierRepository : IRepository<Supplier, int>
     {
+
+        // TODO: VC: DELETE
+
+        /*
+
         Task<IEnumerable<Supplier>> GetAsync();
 
         Task<Supplier> GetAsync(int id);
@@ -18,6 +24,8 @@ namespace Optivem.Northwind.Core.Domain.Repository
 
         void Delete(Supplier supplier);
 
-        bool Exists(int id);
+        bool GetExists(int id);
+        
+        */
     }
 }

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Optivem.Repository" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Optivem.Northwind.Core.Domain.Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
   </ItemGroup>
 

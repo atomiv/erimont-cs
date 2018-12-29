@@ -35,7 +35,7 @@ namespace Optivem.Northwind.Core.Application.Service
 
         public Task<Supplier> GetAsync(int id)
         {
-            return repository.GetAsync(id);
+            return repository.GetSingleOrDefaultAsync(id);
         }
 
         public void Update(Supplier supplier)
@@ -45,7 +45,7 @@ namespace Optivem.Northwind.Core.Application.Service
 
         public bool Exists(int id)
         {
-            return repository.Exists(id);
+            return repository.GetExists(id);
         }
     }
 }

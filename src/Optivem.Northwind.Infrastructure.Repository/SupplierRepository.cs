@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
+using Optivem.Repository.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,20 @@ using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Infrastructure.Repository
 {
-    public class SupplierRepository : ISupplierRepository
+    // TODO: VC: EntityFrameworkRepository<Supplier, int>, 
+
+    public class SupplierRepository : EntityFrameworkRepository<Supplier, int, NorthwindContext>, ISupplierRepository
     {
+        public SupplierRepository(NorthwindContext context) 
+            : base(context)
+        {
+        }
+
+
+        // TODO: VC: DELETE
+
+        /*
+
         private readonly NorthwindContext context;
 
         public SupplierRepository(NorthwindContext context)
@@ -28,7 +41,7 @@ namespace Optivem.Northwind.Infrastructure.Repository
             context.Suppliers.Remove(supplier);
         }
 
-        public bool Exists(int id)
+        public bool GetExists(int id)
         {
             return context.Suppliers.Any(e => e.SupplierId == id);
         }
@@ -47,6 +60,8 @@ namespace Optivem.Northwind.Infrastructure.Repository
         {
             context.Entry(supplier).State = EntityState.Modified;
         }
+
+        */
 
     }
 }
