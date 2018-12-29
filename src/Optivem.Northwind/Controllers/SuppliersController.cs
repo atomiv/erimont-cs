@@ -16,19 +16,12 @@ namespace Optivem.Northwind.Controllers
     [ApiController]
     public class SuppliersController : ControllerBase
     {
-        // TODO: VC: DELETE context
-
-        // private readonly NorthwindContext context;
-
         private readonly INorthwindUnitOfWork unitOfWork;
 
         private readonly ISupplierService service;
 
-        public SuppliersController(/* NorthwindContext context, */ INorthwindUnitOfWork unitOfWork, ISupplierService service)
+        public SuppliersController(INorthwindUnitOfWork unitOfWork, ISupplierService service)
         {
-            // TODO: VC: DELETE
-
-            // this.context = context;
             this.unitOfWork = unitOfWork;
             this.service = service;
         }
@@ -37,9 +30,6 @@ namespace Optivem.Northwind.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Supplier>>> GetSuppliers()
         {
-            // TODO: VC: DELETE
-            // return await context.Suppliers.ToListAsync();
-
             var result = await service.GetAsync();
             return result.ToList();
         }
@@ -48,9 +38,6 @@ namespace Optivem.Northwind.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Supplier>> GetSupplier(int id)
         {
-            // TODO: VC: DELETE
-            // var supplier = await context.Suppliers.FindAsync(id);
-
             var supplier = await service.GetAsync(id);
 
             if (supplier == null)
@@ -69,30 +56,7 @@ namespace Optivem.Northwind.Controllers
             {
                 return BadRequest();
             }
-
-            // TODO: VC: DELETE
-
-
-            /*
-            context.Entry(supplier).State = EntityState.Modified;
-
-            try
-            {
-                await context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SuppliersExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            */
-
+            
             service.Update(supplier);
 
             try
@@ -101,7 +65,7 @@ namespace Optivem.Northwind.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SuppliersExists(id))
+                if (!SupplierExists(id))
                 {
                     return NotFound();
                 }
@@ -118,15 +82,9 @@ namespace Optivem.Northwind.Controllers
         [HttpPost]
         public async Task<ActionResult<Supplier>> PostSupplier(Supplier supplier)
         {
-            // TODO: VC: DELETE
-
-            // context.Suppliers.Add(supplier);
-            // await context.SaveChangesAsync();
-
             service.Add(supplier);
             await unitOfWork.CommitAsync();
-
-
+            
             return CreatedAtAction("GetSupplier", new { id = supplier.SupplierId }, supplier);
         }
 
@@ -134,19 +92,6 @@ namespace Optivem.Northwind.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Supplier>> DeleteSupplier(int id)
         {
-            // TODO: VC: DELETE
-            
-            /*
-            var supplier = await context.Suppliers.FindAsync(id);
-            if (supplier == null)
-            {
-                return NotFound();
-            }
-
-            context.Suppliers.Remove(supplier);
-            await context.SaveChangesAsync();
-            */
-            
             var supplier = await service.GetAsync(id);
             if (supplier == null)
             {
@@ -159,11 +104,8 @@ namespace Optivem.Northwind.Controllers
             return supplier;
         }
 
-        private bool SuppliersExists(int id)
+        private bool SupplierExists(int id)
         {
-            // TODO: VC: DELETE
-            // return context.Suppliers.Any(e => e.SupplierId == id);
-
             return service.Exists(id);
         }
     }
