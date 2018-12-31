@@ -12,12 +12,11 @@ using Optivem.Northwind.Infrastructure.Repository;
 
 namespace Optivem.Northwind.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/suppliers")]
     [ApiController]
     public class SuppliersController : ControllerBase
     {
         private readonly INorthwindUnitOfWork unitOfWork;
-
         private readonly ISupplierService service;
 
         public SuppliersController(INorthwindUnitOfWork unitOfWork, ISupplierService service)
@@ -26,7 +25,6 @@ namespace Optivem.Northwind.Controllers
             this.service = service;
         }
 
-        // GET: api/Suppliers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Supplier>>> GetSuppliers()
         {
@@ -34,7 +32,6 @@ namespace Optivem.Northwind.Controllers
             return result.ToList();
         }
 
-        // GET: api/Suppliers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Supplier>> GetSupplier(int id)
         {
@@ -48,9 +45,8 @@ namespace Optivem.Northwind.Controllers
             return supplier;
         }
 
-        // PUT: api/Suppliers/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSuppliers(int id, Supplier supplier)
+        public async Task<IActionResult> PutSupplier(int id, Supplier supplier)
         {
             if (id != supplier.SupplierId)
             {
@@ -59,19 +55,13 @@ namespace Optivem.Northwind.Controllers
             
             try
             {
-                // unitOfWork.BeginTransaction();
-
                 service.Update(supplier);
 
                 await unitOfWork.SaveChangesAsync();
-
-                // unitOfWork.CommitTransaction();
             }
             catch (DbUpdateConcurrencyException)
             {
-                // unitOfWork.RollbackTransaction();
-
-                if (!SupplierExists(id))
+                if (!service.Exists(id))
                 {
                     return NotFound();
                 }
@@ -84,7 +74,6 @@ namespace Optivem.Northwind.Controllers
             return NoContent();
         }
 
-        // POST: api/Suppliers
         [HttpPost]
         public async Task<ActionResult<Supplier>> PostSupplier(Supplier supplier)
         {
@@ -95,11 +84,11 @@ namespace Optivem.Northwind.Controllers
             return CreatedAtAction("GetSupplier", new { id = supplier.SupplierId }, supplier);
         }
 
-        // DELETE: api/Suppliers/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Supplier>> DeleteSupplier(int id)
         {
             var supplier = await service.GetAsync(id);
+
             if (supplier == null)
             {
                 return NotFound();
@@ -110,11 +99,6 @@ namespace Optivem.Northwind.Controllers
             await unitOfWork.SaveChangesAsync();
             
             return supplier;
-        }
-
-        private bool SupplierExists(int id)
-        {
-            return service.Exists(id);
         }
     }
 }
