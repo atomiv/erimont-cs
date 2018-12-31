@@ -361,14 +361,14 @@ namespace Optivem.Northwind.Infrastructure.Repository
                     .HasConstraintName("FK_Products_Suppliers");
             });
 
+			// TODO: VC: Update DB script set id key generation
+
             modelBuilder.Entity<Region>(entity =>
             {
-                entity.HasKey(e => e.RegionId)
-                    .ForSqlServerIsClustered(false);
+                entity.HasKey(e => e.RegionId);
 
                 entity.Property(e => e.RegionId)
-                    .HasColumnName("RegionID")
-                    .ValueGeneratedNever();
+                    .HasColumnName("RegionID");
 
                 entity.Property(e => e.RegionDescription)
                     .IsRequired()

@@ -14,11 +14,14 @@ namespace Optivem.Northwind.Infrastructure.Repository
         {
             SupplierRepository = new SupplierRepository(context);
 			ProductRepository = new ProductRepository(context);
+			RegionRepository = new RegionRepository(context);
 		}
 
         public ISupplierRepository SupplierRepository { get; private set; }
 
 		public IProductRepository ProductRepository { get; private set; }
+
+		public IRegionRepository RegionRepository { get; private set; }
 
 
 	}
