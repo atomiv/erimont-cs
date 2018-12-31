@@ -288,6 +288,148 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "api/regions",
+			"item": [
+				{
+					"name": "GET api/regions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/regions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"regionDescription\": \"Jellyland\",\n    \"territories\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/regions/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/suppliers/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"regionId\": 5,\n    \"regionDescription\": \"Swarovski\",\n    \"territories\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/regions/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
