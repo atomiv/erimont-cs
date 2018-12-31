@@ -57,14 +57,20 @@ namespace Optivem.Northwind.Controllers
                 return BadRequest();
             }
             
-            service.Update(supplier);
-
             try
             {
-                await unitOfWork.CommitAsync();
+                // unitOfWork.BeginTransaction();
+
+                service.Update(supplier);
+
+                await unitOfWork.SaveChangesAsync();
+
+                // unitOfWork.CommitTransaction();
             }
             catch (DbUpdateConcurrencyException)
             {
+                // unitOfWork.RollbackTransaction();
+
                 if (!SupplierExists(id))
                 {
                     return NotFound();
@@ -83,7 +89,8 @@ namespace Optivem.Northwind.Controllers
         public async Task<ActionResult<Supplier>> PostSupplier(Supplier supplier)
         {
             service.Add(supplier);
-            await unitOfWork.CommitAsync();
+
+            await unitOfWork.SaveChangesAsync();
             
             return CreatedAtAction("GetSupplier", new { id = supplier.SupplierId }, supplier);
         }
@@ -99,7 +106,8 @@ namespace Optivem.Northwind.Controllers
             }
 
             service.Delete(supplier);
-            await unitOfWork.CommitAsync();
+
+            await unitOfWork.SaveChangesAsync();
             
             return supplier;
         }

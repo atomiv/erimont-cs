@@ -10,22 +10,5 @@ namespace Optivem.Northwind.Core.Domain.Repository
     public interface ISupplierRepository : IRepository<Supplier, int>
     {
 
-        // TODO: VC: DELETE
-
-        /*
-
-        Task<IEnumerable<Supplier>> GetAsync();
-
-        Task<Supplier> GetAsync(int id);
-
-        void Update(Supplier supplier);
-
-        void Add(Supplier supplier);
-
-        void Delete(Supplier supplier);
-
-        bool GetExists(int id);
-        
-        */
     }
 }
