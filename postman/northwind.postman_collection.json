@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "d8639cc4-c871-41c9-9724-d9b31891cc54",
+		"name": "northwind",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/suppliers",
+			"item": [
+				{
+					"name": "GET api/suppliers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/suppliers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/suppliers/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/suppliers/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supplierId\": 30,\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA Serbia\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/suppliers/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/products",
+			"item": [
+				{
+					"name": "GET api/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productName\": \"apple\",\n    \"supplierId\": 1,\n    \"categoryId\": 1,\n    \"quantityPerUnit\": \"10 boxes x 20 bags\",\n    \"unitPrice\": 18,\n    \"unitsInStock\": 39,\n    \"unitsOnOrder\": 0,\n    \"reorderLevel\": 10,\n    \"discontinued\": false,\n    \"category\": null,\n    \"supplier\": null,\n    \"orderDetails\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/products/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/products/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"products",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/products/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": 78,\n    \"productName\": \"banana\",\n    \"supplierId\": 1,\n    \"categoryId\": 1,\n    \"quantityPerUnit\": \"10 boxes x 20 bags\",\n    \"unitPrice\": 18,\n    \"unitsInStock\": 39,\n    \"unitsOnOrder\": 0,\n    \"reorderLevel\": 10,\n    \"discontinued\": false,\n    \"category\": null,\n    \"supplier\": null,\n    \"orderDetails\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/products/78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"products",
+								"78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/products/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/products/78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"products",
+								"78"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
