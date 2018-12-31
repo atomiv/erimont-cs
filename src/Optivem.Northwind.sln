@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Doma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Dto", "Optivem.Northwind.Core.Application.Dto\Optivem.Northwind.Core.Application.Dto.csproj", "{FB545F98-4523-4BFE-9CE5-D39798DBA743}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.Northwind.Core.Application.Mapping", "Optivem.Northwind.Core.Application.Mapping\Optivem.Northwind.Core.Application.Mapping.csproj", "{0492C1A3-43DD-4C3D-B249-3D191E465E94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FB545F98-4523-4BFE-9CE5-D39798DBA743}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB545F98-4523-4BFE-9CE5-D39798DBA743}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB545F98-4523-4BFE-9CE5-D39798DBA743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0492C1A3-43DD-4C3D-B249-3D191E465E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0492C1A3-43DD-4C3D-B249-3D191E465E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0492C1A3-43DD-4C3D-B249-3D191E465E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0492C1A3-43DD-4C3D-B249-3D191E465E94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
