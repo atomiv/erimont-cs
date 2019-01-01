@@ -1,5 +1,5 @@
 ﻿using Optivem.Northwind.Core.Domain.Entity;
-using Optivem.Repository;
+using Optivem.Commons.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Text;
