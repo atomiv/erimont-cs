@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
-using Optivem.Northwind.Infrastructure.Repository;
 
 namespace Optivem.Northwind.Controllers
 {
-	[Route("api/customers")]
+    [Route("api/customers")]
 	[ApiController]
 	public class CustomersController : ControllerBase
 	{

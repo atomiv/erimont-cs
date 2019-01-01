@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
 namespace Optivem.Northwind.Core.Application.Service
 {
-	public class RegionService : IRegionService
+    public class RegionService : IRegionService
 	{
 		private INorthwindUnitOfWork unitOfWork;
 		private IRegionRepository repository;

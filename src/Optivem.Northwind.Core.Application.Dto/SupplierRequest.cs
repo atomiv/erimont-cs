@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Optivem.Northwind.Core.Application.Dto
+﻿namespace Optivem.Northwind.Core.Application.Dto
 {
     // TODO: VC: Distinguishing between create and update requests or not?
 

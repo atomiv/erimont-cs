@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using Optivem.Northwind.Core.Domain.Entity;
 
 namespace Optivem.Northwind.Infrastructure.Repository

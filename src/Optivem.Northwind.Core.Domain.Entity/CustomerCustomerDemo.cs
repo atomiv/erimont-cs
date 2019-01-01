@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Optivem.Northwind.Core.Domain.Entity
+﻿namespace Optivem.Northwind.Core.Domain.Entity
 {
     public partial class CustomerCustomerDemo
     {

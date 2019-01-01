@@ -1,7 +1,5 @@
-﻿using AutoMapper;
-using Optivem.Northwind.Core.Application.Dto;
+﻿using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
-using System;
 
 namespace Optivem.Northwind.Core.Application.Mapping
 {

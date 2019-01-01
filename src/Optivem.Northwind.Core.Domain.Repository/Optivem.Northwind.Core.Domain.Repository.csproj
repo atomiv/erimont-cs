@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Optivem.Repository" Version="1.0.1" />
+    <PackageReference Include="Optivem.Commons.Persistence" Version="1.0.0" />
+    <PackageReference Include="Optivem.Commons.Persistence.EntityFramework" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

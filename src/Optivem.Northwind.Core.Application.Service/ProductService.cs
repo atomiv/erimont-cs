@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
 namespace Optivem.Northwind.Core.Application.Service
 {
-	public class ProductService : IProductService
+    public class ProductService : IProductService
 	{
 		private INorthwindUnitOfWork unitOfWork;
 		private IProductRepository repository;
