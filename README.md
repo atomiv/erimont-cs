@@ -33,7 +33,7 @@ Inside the project Optivem.Northwind.Core.Domain.Repository, create the reposito
 Inside the project Optivem.Northwind.Infrastructure.Repository, provide the implementation for that interface:
 * SupplierRepository.cs
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Repository/SupplierRepository.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Infrastructure.Repository/SupplierRepository.cs"></script>
 
 ### Unit of Work - Interface
 
@@ -48,7 +48,7 @@ Inside the project Optivem.Northwind.Infrastructure.Repository, inside Northwind
 * SupplierRepository = new SupplierRepository(context);
 * ISupplierRepository SupplierRepository { get; }
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Repository/NorthwindUnitOfWork.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Infrastructure.Repository/NorthwindUnitOfWork.cs"></script>
 
 ### DTO - Request - Implementation
 
