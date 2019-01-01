@@ -383,7 +383,7 @@
 					"response": []
 				},
 				{
-					"name": "PUT api/suppliers/{id}",
+					"name": "PUT api/regions/{id}",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -857,6 +857,158 @@
 								"api",
 								"categories",
 								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/customerdemographics",
+			"item": [
+				{
+					"name": "GET api/customerdemographics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/customerdemographics",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerTypeId\": \"AAAAACABC2\",\n    \"customerDesc\": \"This is the third customer type\",\n    \"customerCustomerDemo\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/customerdemographics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"customerdemographics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/customerdemographics/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/customerdemographics/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"regionId\": 5,\n    \"regionDescription\": \"Swarovski\",\n    \"territories\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/customerdemographics/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/regions/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"regions",
+								"6"
 							]
 						}
 					},
