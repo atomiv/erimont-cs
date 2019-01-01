@@ -6,6 +6,10 @@
 
 [Northwind C# Documentation](https://opensource.optivem.com/northwind-csharp)
 
+## Issues
+
+[Northwind C# Issues](https://github.com/optivem/northwind-csharp/issues)
+
 ## Project structure
 
 The following example illustrates the example for suppliers.
@@ -101,3 +105,7 @@ Inside the project Optivem.Northwind, folder Controllers, we have the class (not
 * SuppliersController
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind/Controllers/SuppliersController.cs"></script>
+
+## License
+
+Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php). Copyright © 2018 [Optivem](https://www.optivem.com/) All Rights Reserved. 
