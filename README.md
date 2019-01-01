@@ -13,6 +13,9 @@ Inside Optivem.Northwind.Core.Domain.Entity, we have:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Entity/Supplier.cs"></script>
 
+{% include src/Optivem.Northwind.Core.Domain.Entity/Supplier.cs %}
+
+
 ### Step 2: Repository
 
 Inside the project Optivem.Northwind.Core.Domain.Repository, create the repository interface:
