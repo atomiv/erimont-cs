@@ -50,6 +50,7 @@ namespace Optivem.Northwind
 			services.AddScoped<ICustomerService, CustomerService>();
 			services.AddScoped<ICustomerCustomerDemoService, CustomerCustomerDemoService>();
 			services.AddScoped<ICustomerDemographicService, CustomerDemographicService>();
+			services.AddScoped<IEmployeeService, EmployeeService>();
 
 		}
 

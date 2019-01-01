@@ -17,5 +17,7 @@ namespace Optivem.Northwind.Core.Domain.Repository
 		ICustomerCustomerDemoRepository CustomerCustomerDemoRepository { get; }
 
 		ICustomerDemographicRepository CustomerDemographicRepository { get; }
+
+		IEmployeeRepository EmployeeRepository { get; }
 	}
 }
