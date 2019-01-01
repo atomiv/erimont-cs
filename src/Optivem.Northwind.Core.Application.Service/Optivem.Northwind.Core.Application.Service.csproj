@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Optivem.Northwind.Core.Application.Dto\Optivem.Northwind.Core.Application.Dto.csproj" />
     <ProjectReference Include="..\Optivem.Northwind.Core.Domain.Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
     <ProjectReference Include="..\Optivem.Northwind.Core.Domain.Repository\Optivem.Northwind.Core.Domain.Repository.csproj" />
   </ItemGroup>

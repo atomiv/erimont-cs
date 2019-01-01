@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Optivem.Northwind.Core.Application.Dto
 {
-    public class SupplierDto
+    // TODO: VC: Distinguishing between create and update requests or not?
+
+    public class SupplierRequest
     {
         public int SupplierId { get; set; }
 

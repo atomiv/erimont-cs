@@ -1,4 +1,5 @@
-﻿using Optivem.Northwind.Core.Domain.Entity;
+﻿using Optivem.Northwind.Core.Application.Dto;
+using Optivem.Northwind.Core.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,15 +8,15 @@ namespace Optivem.Northwind.Core.Application.Service
 {
     public interface ISupplierService
     {
-        Task<IEnumerable<Supplier>> GetAsync();
+        Task<IEnumerable<SupplierResponse>> GetAsync();
 
-        Task<Supplier> GetAsync(int id);
+        Task<SupplierResponse> GetAsync(int id);
 
-        void Add(Supplier supplier);
+        SupplierResponse Add(SupplierRequest supplier);
 
-        void Update(Supplier supplier);
+        void Update(SupplierRequest supplier);
 
-        void Delete(Supplier supplier);
+        void Delete(int id);
 
         bool Exists(int id);
     }

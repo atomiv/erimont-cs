@@ -77,11 +77,19 @@ namespace Optivem.Northwind.Controllers
 		[HttpPost]
 		public async Task<ActionResult<Product>> PostProduct(Product product)
 		{
-			service.Add(product);
+            try
+            {
+                service.Add(product);
 
-			await unitOfWork.SaveChangesAsync();
+                await unitOfWork.SaveChangesAsync();
 
-			return CreatedAtAction("GetProduct", new { id = product.ProductId }, product);
+                return CreatedAtAction("GetProduct", new { id = product.ProductId }, product);
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+
 		}
 
 		[HttpDelete("{id}")]

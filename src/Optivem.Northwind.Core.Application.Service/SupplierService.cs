@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
+using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
@@ -9,38 +11,52 @@ namespace Optivem.Northwind.Core.Application.Service
 {
     public class SupplierService : ISupplierService
     {
+        private IMapper mapper;
         private INorthwindUnitOfWork unitOfWork;
         private ISupplierRepository repository;
 
-        public SupplierService(INorthwindUnitOfWork unitOfWork)
+        public SupplierService(IMapper mapper, INorthwindUnitOfWork unitOfWork)
         {
+            this.mapper = mapper;
             this.unitOfWork = unitOfWork;
             this.repository = unitOfWork.SupplierRepository;
         }
 
-        public void Add(Supplier supplier)
+        public SupplierResponse Add(SupplierRequest supplier)
         {
-            repository.Add(supplier);
+            var entity = mapper.Map<SupplierRequest, Supplier>(supplier);
+            repository.Add(entity);
+            unitOfWork.SaveChanges();
+            var response = mapper.Map<Supplier, SupplierResponse>(entity);
+            return response;
         }
 
-        public void Delete(Supplier supplier)
+        public void Delete(int id)
         {
-            repository.Delete(supplier);
+            var entity = repository.GetSingleOrDefault(id);
+
+            if(entity != null)
+            {
+                repository.Delete(entity);
+            }
         }
         
-        public Task<IEnumerable<Supplier>> GetAsync()
+        public async Task<IEnumerable<SupplierResponse>> GetAsync()
         {
-            return repository.GetAsync();
+            var entities = await repository.GetAsync();
+            return mapper.Map<IEnumerable<Supplier>, IEnumerable<SupplierResponse>>(entities);
         }
 
-        public Task<Supplier> GetAsync(int id)
+        public async Task<SupplierResponse> GetAsync(int id)
         {
-            return repository.GetSingleOrDefaultAsync(id);
+            var entity = await repository.GetSingleOrDefaultAsync(id);
+            return mapper.Map<Supplier, SupplierResponse>(entity);
         }
 
-        public void Update(Supplier supplier)
+        public void Update(SupplierRequest supplier)
         {
-            repository.Update(supplier);
+            var entity = mapper.Map<SupplierRequest, Supplier>(supplier);
+            repository.Update(entity);
         }
 
         public bool Exists(int id)
