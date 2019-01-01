@@ -576,6 +576,148 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "api/customers",
+			"item": [
+				{
+					"name": "GET api/customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/customers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\": \"RRRRR\",\n    \"companyName\": \"France Paris restauration\",\n    \"contactName\": \"Carine Schmitt\",\n    \"contactTitle\": \"Marketing Manager\",\n    \"address\": \"54, rue Royale\",\n    \"city\": \"Nantes\",\n    \"region\": null,\n    \"postalCode\": \"44000\",\n    \"country\": \"France\",\n    \"phone\": \"40.32.21.21\",\n    \"fax\": \"40.32.21.20\",\n    \"customerCustomerDemo\": [],\n    \"orders\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/customers/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/customers/FRANR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"customers",
+								"FRANR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/customers/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\": \"RRRRR\",\n    \"companyName\": \"France Parisss restauration\",\n    \"contactName\": \"Carine Schmitt\",\n    \"contactTitle\": \"Marketing Manager\",\n    \"address\": \"54, rue Royale\",\n    \"city\": \"Nantes\",\n    \"region\": null,\n    \"postalCode\": \"44000\",\n    \"country\": \"France\",\n    \"phone\": \"40.32.21.21\",\n    \"fax\": \"40.32.21.20\",\n    \"customerCustomerDemo\": [],\n    \"orders\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/customers/RRRRR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"customers",
+								"RRRRR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/customers/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/categories/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"categories",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

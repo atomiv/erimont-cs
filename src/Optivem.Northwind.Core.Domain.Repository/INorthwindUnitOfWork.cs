@@ -15,5 +15,7 @@ namespace Optivem.Northwind.Core.Domain.Repository
 		IRegionRepository RegionRepository { get; }
 
 		ICategoryRepository CategoryRepository { get; }
+
+		ICustomerRepository CustomerRepository { get; }
 	}
 }
