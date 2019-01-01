@@ -10,31 +10,35 @@
 
 The following example illustrates the example for suppliers.
 
-### Step 1: Entity
+### Entity - Implementation
 
 Inside Optivem.Northwind.Core.Domain.Entity, we have:
 * Supplier.cs
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Entity/Supplier.cs"></script>
 
-### Step 2: Repository
+### Repository - Interface
 
 Inside the project Optivem.Northwind.Core.Domain.Repository, create the repository interface:
 * ISupplierRepository.cs
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Repository/ISupplierRepository.cs"></script>
 
+### Repository - Implementation
+
 Inside the project Optivem.Northwind.Infrastructure.Repository, provide the implementation for that interface:
 * SupplierRepository.cs
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Repository/SupplierRepository.cs"></script>
 
-### Step 3: Unit of Work
+### Unit of Work - Interface
 
 Inside the project Optivem.Northwind.Core.Domain.Repository, inside INorthwindUnitOfWork.cs, reference the following:
 * ISupplierRepository SupplierRepository { get; }
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Repository/INorthwindUnitOfWork.cs"></script>
+
+### Unit of Work - Implementation
 
 Inside the project Optivem.Northwind.Infrastructure.Repository, inside NorthwindUnitOfWork.cs, reference the following:
 * SupplierRepository = new SupplierRepository(context);
@@ -42,27 +46,56 @@ Inside the project Optivem.Northwind.Infrastructure.Repository, inside Northwind
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Repository/NorthwindUnitOfWork.cs"></script>
 
+### DTO - Request - Implementation
 
-### Step 4: Service
+Inside the project Optivem.Northwind.Core.Application.Dto, we have the class:
+* SupplierRequest.cs
+
+<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Application.Dto/SupplierRequest.cs"></script>
+
+### DTO - Response - Implementation
+
+Inside the project Optivem.Northwind.Core.Application.Dto, we have the class:
+* SupplierResponse.cs
+
+<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Application.Dto/SupplierResponse.cs"></script>
+
+### Mapping - Request - Implementation
+
+Inside the project Optivem.Northwind.Core.Application.Mapping, we have the class:
+* SupplierRequestMapping
+
+<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Application.Mapping/SupplierRequestMapping.cs"></script>
+
+### Mapping - Response - Implementation
+
+Inside the project Optivem.Northwind.Core.Application.Mapping, we have the class:
+* SupplierResponseMapping
+
+<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Application.Mapping/SupplierResponseMapping.cs"></script>
+
+### Service - Interface
 
 Inside the project Optivem.Northwind.Core.Application.Service, we have the service interface:
 * ISupplierService.cs
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Application.Service/ISupplierService.cs"></script>
 
+### Service - Implementation
+
 Inside the project Optivem.Northwind.Core.Application.Service, we have the service implementation:
 * SupplierService
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Application.Service/SupplierService.cs"></script>
 
-### Step 5: IoC
+### IoC
 
 Inside the project Optivem.Northwind, inside the class Startup.cs, add the following:
 * services.AddScoped<ISupplierService, SupplierService>();
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind/Startup.cs"></script>
 
-### Step 6: Controller
+### Controller
 
 Inside the project Optivem.Northwind, folder Controllers, we have the class (note the plural name):
 * SuppliersController
