@@ -17,6 +17,7 @@ namespace Optivem.Northwind.Infrastructure.Repository
 			RegionRepository = new RegionRepository(context);
 			CategoryRepository = new CategoryRepository(context);
 			CustomerRepository = new CustomerRepository(context);
+			CustomerCustomerDemoRepository = new CustomerCustomerDemoRepository(context);
 		}
 
         public ISupplierRepository SupplierRepository { get; private set; }
@@ -28,6 +29,8 @@ namespace Optivem.Northwind.Infrastructure.Repository
 		public ICategoryRepository CategoryRepository { get; private set; }
 
 		public ICustomerRepository CustomerRepository { get; private set; }
+
+		public ICustomerCustomerDemoRepository CustomerCustomerDemoRepository { get; private set; }
 
 	}
 }
