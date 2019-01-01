@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
-using Optivem.Northwind.Infrastructure.Repository;
 
 namespace Optivem.Northwind.Controllers
 {
-	[Route("api/products")]
+    [Route("api/products")]
 	[ApiController]
 	public class ProductsController : ControllerBase
 	{
@@ -77,11 +75,19 @@ namespace Optivem.Northwind.Controllers
 		[HttpPost]
 		public async Task<ActionResult<Product>> PostProduct(Product product)
 		{
-			service.Add(product);
+            try
+            {
+                service.Add(product);
 
-			await unitOfWork.SaveChangesAsync();
+                await unitOfWork.SaveChangesAsync();
 
-			return CreatedAtAction("GetProduct", new { id = product.ProductId }, product);
+                return CreatedAtAction("GetProduct", new { id = product.ProductId }, product);
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+
 		}
 
 		[HttpDelete("{id}")]

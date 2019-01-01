@@ -1,8 +1,4 @@
-﻿using Optivem.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Optivem.Commons.Persistence;
 
 namespace Optivem.Northwind.Core.Domain.Repository
 {

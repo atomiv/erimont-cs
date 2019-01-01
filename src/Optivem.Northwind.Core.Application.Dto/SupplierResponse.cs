@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Optivem.Northwind.Core.Application.Dto
+﻿namespace Optivem.Northwind.Core.Application.Dto
 {
-    public class SupplierDto
+    // TODO: VC: Add example of including for example date created, date modified
+
+    public class SupplierResponse
     {
         public int SupplierId { get; set; }
 

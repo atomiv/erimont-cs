@@ -1,9 +1,5 @@
-﻿using Optivem.Northwind.Core.Domain.Repository;
-using Optivem.Repository.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Optivem.Commons.Persistence.EntityFramework;
+using Optivem.Northwind.Core.Domain.Repository;
 
 namespace Optivem.Northwind.Infrastructure.Repository
 {

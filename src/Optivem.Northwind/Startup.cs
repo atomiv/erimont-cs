@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Optivem.Northwind.Core.Application.Mapping;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Repository;
 using Optivem.Northwind.Infrastructure.Repository;
@@ -29,8 +25,17 @@ namespace Optivem.Northwind
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // MVC
             services.AddMvc();
-            
+
+            // Mapping
+            services.AddAutoMapper(e =>
+            {
+                e.AddProfile(new SupplierRequestMapping());
+                e.AddProfile(new SupplierResponseMapping());
+            });
+
+            // DB Context
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);
             services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(connection));
 
