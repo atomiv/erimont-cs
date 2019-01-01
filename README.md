@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/optivem/northwind-csharp.svg?branch=master)](https://travis-ci.org/optivem/northwind-csharp)
 
+## Documentation
+
+https://opensource.optivem.com/northwind-csharp
+
 ## Project structure
 
 The following example illustrates the example for suppliers.
@@ -13,13 +17,12 @@ Inside Optivem.Northwind.Core.Domain.Entity, we have:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Entity/Supplier.cs"></script>
 
-{% include src/Optivem.Northwind.Core.Domain.Entity/Supplier.cs %}
-
-
 ### Step 2: Repository
 
 Inside the project Optivem.Northwind.Core.Domain.Repository, create the repository interface:
 * ISupplierRepository.cs
+
+<script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind.Core.Domain.Entity/Supplier.cs"></script>
 
 Inside the project Optivem.Northwind.Infrastructure.Repository, provide the implementation for that interface:
 * SupplierRepository.cs
