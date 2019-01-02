@@ -1,7 +1,5 @@
 ﻿namespace Optivem.Northwind.Core.Application.Dto
 {
-    // TODO: VC: Add example of including for example date created, date modified
-
     public class SupplierResponse
     {
         public int SupplierId { get; set; }

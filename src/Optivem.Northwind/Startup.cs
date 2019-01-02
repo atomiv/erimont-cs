@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Optivem.Commons.Mapping;
+using Optivem.Commons.Mapping.AutoMapper;
 using Optivem.Northwind.Core.Application.Mapping;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Repository;
@@ -35,6 +37,8 @@ namespace Optivem.Northwind
                 e.AddProfile(new SupplierResponseMapping());
             });
 
+            services.AddScoped<IMappingService, AutoMapperMappingService>();
+
             // DB Context
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);
             services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(connection));
@@ -65,7 +69,5 @@ namespace Optivem.Northwind
 
             app.UseMvc();
         }
-
-		// TODO: JC: Test commit
     }
 }

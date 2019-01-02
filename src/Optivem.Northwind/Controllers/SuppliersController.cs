@@ -90,9 +90,7 @@ namespace Optivem.Northwind.Controllers
             {
                 return NotFound();
             }
-
-            // TODO: VC: InvalidOperationException: The instance of entity type &#x27;Supplier&#x27; cannot be tracked because another instance with the same key value for {&#x27;SupplierId&#x27;} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using &#x27;DbContextOptionsBuilder.EnableSensitiveDataLogging&#x27; to see the conflicting key values.
-
+            
             service.Delete(id);
 
             await unitOfWork.SaveChangesAsync();
