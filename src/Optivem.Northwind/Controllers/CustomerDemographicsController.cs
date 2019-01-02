@@ -12,7 +12,7 @@ using Optivem.Northwind.Infrastructure.Repository;
 
 namespace Optivem.Northwind.Controllers
 {
-	[Route("api/customerdemographics")]
+	[Route("api/customerDemographics")]
 	[ApiController]
 	public class CustomerDemographicsController : ControllerBase
 	{
@@ -35,27 +35,27 @@ namespace Optivem.Northwind.Controllers
 		[HttpGet("{id}")]
 		public async Task<ActionResult<CustomerDemographic>> GetCustomerDemographic(string id)
 		{
-			var customerdemographic = await service.GetAsync(id);
+			var customerDemographic = await service.GetAsync(id);
 
-			if (customerdemographic == null)
+			if (customerDemographic == null)
 			{
 				return NotFound();
 			}
 
-			return customerdemographic;
+			return customerDemographic;
 		}
 
 		[HttpPut("{id}")]
-		public async Task<IActionResult> PutCustomerDemographic(string id, CustomerDemographic customerdemographic)
+		public async Task<IActionResult> PutCustomerDemographic(string id, CustomerDemographic customerDemographic)
 		{
-			if (id != customerdemographic.CustomerTypeId)
+			if (id != customerDemographic.CustomerTypeId)
 			{
 				return BadRequest();
 			}
 
 			try
 			{
-				service.Update(customerdemographic);
+				service.Update(customerDemographic);
 
 				await unitOfWork.SaveChangesAsync();
 			}
@@ -75,30 +75,30 @@ namespace Optivem.Northwind.Controllers
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<CustomerDemographic>> PostCustomerDemographic(CustomerDemographic customerdemographic)
+		public async Task<ActionResult<CustomerDemographic>> PostCustomerDemographic(CustomerDemographic customerDemographic)
 		{
-			service.Add(customerdemographic);
+			service.Add(customerDemographic);
 
 			await unitOfWork.SaveChangesAsync();
 
-			return CreatedAtAction("GetCustomerDemographic", new { id = customerdemographic.CustomerTypeId }, customerdemographic);
+			return CreatedAtAction("GetCustomerDemographic", new { id = customerDemographic.CustomerTypeId }, customerDemographic);
 		}
 
 		[HttpDelete("{id}")]
 		public async Task<ActionResult<CustomerDemographic>> DeleteCustomerDemographic(string id)
 		{
-			var customerdemographic = await service.GetAsync(id);
+			var customerDemographic = await service.GetAsync(id);
 
-			if (customerdemographic == null)
+			if (customerDemographic == null)
 			{
 				return NotFound();
 			}
 
-			service.Delete(customerdemographic);
+			service.Delete(customerDemographic);
 
 			await unitOfWork.SaveChangesAsync();
 
-			return customerdemographic;
+			return customerDemographic;
 		}
 	}
 }

@@ -12,7 +12,7 @@ using Optivem.Northwind.Infrastructure.Repository;
 
 namespace Optivem.Northwind.Controllers
 {
-	[Route("api/customercustomerdemos")]
+	[Route("api/customerCustomerDemos")]
 	[ApiController]
 	public class CustomerCustomerDemosController : ControllerBase
 	{
@@ -40,32 +40,32 @@ namespace Optivem.Northwind.Controllers
 			string customerId = parts[0];
 			string customerTypeId = parts[1];
 
-			var customercustomerdemo = await service.GetAsync(customerId, customerTypeId);
+			var customerCustomerDemo = await service.GetAsync(customerId, customerTypeId);
 
-			if (customercustomerdemo == null)
+			if (customerCustomerDemo == null)
 			{
 				return NotFound();
 			}
 
-			return customercustomerdemo;
+			return customerCustomerDemo;
 		}
 
 		[HttpPut("{id}")]
-		public async Task<IActionResult> PutCustomerCustomerDemo(string id, CustomerCustomerDemo customercustomerdemo)
+		public async Task<IActionResult> PutCustomerCustomerDemo(string id, CustomerCustomerDemo customerCustomerDemo)
 		{
 			string[] parts = SplitId(id);
 
 			string customerId = parts[0];
 			string customerTypeId = parts[1];
 
-			if (customerId != customercustomerdemo.CustomerId || customerTypeId != customercustomerdemo.CustomerTypeId)
+			if (customerId != customerCustomerDemo.CustomerId || customerTypeId != customerCustomerDemo.CustomerTypeId)
 			{
 				return BadRequest();
 			}
 
 			try
 			{
-				service.Update(customercustomerdemo);
+				service.Update(customerCustomerDemo);
 
 				await unitOfWork.SaveChangesAsync();
 			}
@@ -85,15 +85,15 @@ namespace Optivem.Northwind.Controllers
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<CustomerCustomerDemo>> PostCustomerCustomerDemo(CustomerCustomerDemo customercustomerdemo)
+		public async Task<ActionResult<CustomerCustomerDemo>> PostCustomerCustomerDemo(CustomerCustomerDemo customerCustomerDemo)
 		{
-			service.Add(customercustomerdemo);
+			service.Add(customerCustomerDemo);
 
 			await unitOfWork.SaveChangesAsync();
 
-			string id = JoinId(customercustomerdemo.CustomerId, customercustomerdemo.CustomerTypeId);
+			string id = JoinId(customerCustomerDemo.CustomerId, customerCustomerDemo.CustomerTypeId);
 
-			return CreatedAtAction("GetCustomerCustomerDemo", new { id = id }, customercustomerdemo);
+			return CreatedAtAction("GetCustomerCustomerDemo", new { id = id }, customerCustomerDemo);
 		}
 
 		[HttpDelete("{id}")]
@@ -104,18 +104,18 @@ namespace Optivem.Northwind.Controllers
 			string customerId = parts[0];
 			string customerTypeId = parts[1];
 
-			var customercustomerdemo = await service.GetAsync(customerId, customerTypeId);
+			var customerCustomerDemo = await service.GetAsync(customerId, customerTypeId);
 
-			if (customercustomerdemo == null)
+			if (customerCustomerDemo == null)
 			{
 				return NotFound();
 			}
 
-			service.Delete(customercustomerdemo);
+			service.Delete(customerCustomerDemo);
 
 			await unitOfWork.SaveChangesAsync();
 
-			return customercustomerdemo;
+			return customerCustomerDemo;
 		}
 
 		private string[] SplitId(string id)

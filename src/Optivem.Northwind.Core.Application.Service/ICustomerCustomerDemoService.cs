@@ -11,11 +11,11 @@ namespace Optivem.Northwind.Core.Application.Service
 
 		Task<CustomerCustomerDemo> GetAsync(string customerId, string customerTypeId);
 
-		void Add(CustomerCustomerDemo customercustomerdemo);
+		void Add(CustomerCustomerDemo customerCustomerDemo);
 
-		void Update(CustomerCustomerDemo customercustomerdemo);
+		void Update(CustomerCustomerDemo customerCustomerDemo);
 
-		void Delete(CustomerCustomerDemo customercustomerdemo);
+		void Delete(CustomerCustomerDemo customerCustomerDemo);
 
 		bool Exists(string customerId, string customerTypeId);
 	}

@@ -18,14 +18,14 @@ namespace Optivem.Northwind.Core.Application.Service
 			this.repository = unitOfWork.CustomerDemographicRepository;
 		}
 
-		public void Add(CustomerDemographic customerdemographic)
+		public void Add(CustomerDemographic customerDemographic)
 		{
-			repository.Add(customerdemographic);
+			repository.Add(customerDemographic);
 		}
 
-		public void Delete(CustomerDemographic customerdemographic)
+		public void Delete(CustomerDemographic customerDemographic)
 		{
-			repository.Delete(customerdemographic);
+			repository.Delete(customerDemographic);
 		}
 
 		public Task<IEnumerable<CustomerDemographic>> GetAsync()
@@ -38,9 +38,9 @@ namespace Optivem.Northwind.Core.Application.Service
 			return repository.GetSingleOrDefaultAsync(id);
 		}
 
-		public void Update(CustomerDemographic customerdemographic)
+		public void Update(CustomerDemographic customerDemographic)
 		{
-			repository.Update(customerdemographic);
+			repository.Update(customerDemographic);
 		}
 
 		public bool Exists(string id)

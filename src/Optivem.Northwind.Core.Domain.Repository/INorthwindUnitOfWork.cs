@@ -21,5 +21,7 @@ namespace Optivem.Northwind.Core.Domain.Repository
 		IEmployeeRepository EmployeeRepository { get; }
 
 		IEmployeeTerritoryRepository EmployeeTerritoryRepository { get; }
+
+		IOrderRepository OrderRepository { get; }
 	}
 }

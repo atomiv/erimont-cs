@@ -40,32 +40,32 @@ namespace Optivem.Northwind.Controllers
 			int employeeId = int.Parse(parts[0]);
 			string territoryId = parts[1];
 
-			var employeeterritory = await service.GetAsync(employeeId, territoryId);
+			var employeeTerritory = await service.GetAsync(employeeId, territoryId);
 
-			if (employeeterritory == null)
+			if (employeeTerritory == null)
 			{
 				return NotFound();
 			}
 
-			return employeeterritory;
+			return employeeTerritory;
 		}
 
 		[HttpPut("{id}")]
-		public async Task<IActionResult> PutEmployeeTerritory(string id, EmployeeTerritory employeeterritory)
+		public async Task<IActionResult> PutEmployeeTerritory(string id, EmployeeTerritory employeeTerritory)
 		{
 			string[] parts = SplitId(id);
 
 			int employeeId = int.Parse(parts[0]);
 			string territoryId = parts[1];
 
-			if (employeeId != employeeterritory.EmployeeId || territoryId != employeeterritory.TerritoryId)
+			if (employeeId != employeeTerritory.EmployeeId || territoryId != employeeTerritory.TerritoryId)
 			{
 				return BadRequest();
 			}
 
 			try
 			{
-				service.Update(employeeterritory);
+				service.Update(employeeTerritory);
 
 				await unitOfWork.SaveChangesAsync();
 			}
@@ -85,15 +85,15 @@ namespace Optivem.Northwind.Controllers
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<EmployeeTerritory>> PostEmployeeTerritory(EmployeeTerritory employeeterritory)
+		public async Task<ActionResult<EmployeeTerritory>> PostEmployeeTerritory(EmployeeTerritory employeeTerritory)
 		{
-			service.Add(employeeterritory);
+			service.Add(employeeTerritory);
 
 			await unitOfWork.SaveChangesAsync();
 
-			string id = JoinId(employeeterritory.EmployeeId.ToString(), employeeterritory.TerritoryId);
+			string id = JoinId(employeeTerritory.EmployeeId.ToString(), employeeTerritory.TerritoryId);
 
-			return CreatedAtAction("GetEmployeeTerritory", new { id = id }, employeeterritory);
+			return CreatedAtAction("GetEmployeeTerritory", new { id = id }, employeeTerritory);
 		}
 
 		[HttpDelete("{id}")]
@@ -104,18 +104,18 @@ namespace Optivem.Northwind.Controllers
 			int employeeId = int.Parse(parts[0]);
 			string territoryId = parts[1];
 
-			var employeeterritory = await service.GetAsync(employeeId, territoryId);
+			var employeeTerritory = await service.GetAsync(employeeId, territoryId);
 
-			if (employeeterritory == null)
+			if (employeeTerritory == null)
 			{
 				return NotFound();
 			}
 
-			service.Delete(employeeterritory);
+			service.Delete(employeeTerritory);
 
 			await unitOfWork.SaveChangesAsync();
 
-			return employeeterritory;
+			return employeeTerritory;
 		}
 
 		private string[] SplitId(string id)
