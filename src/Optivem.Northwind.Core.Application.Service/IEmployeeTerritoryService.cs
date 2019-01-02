@@ -9,14 +9,14 @@ namespace Optivem.Northwind.Core.Application.Service
 	{
 		Task<IEnumerable<EmployeeTerritory>> GetAsync();
 
-		Task<EmployeeTerritory> GetAsync(string employeeId, string territoryId);
+		Task<EmployeeTerritory> GetAsync(int employeeId, string territoryId);
 
-		void Add(EmployeeTerritory employeeterritory);
+		void Add(EmployeeTerritory employeeTerritory);
 
-		void Update(EmployeeTerritory employeeterritory);
+		void Update(EmployeeTerritory employeeTerritory);
 
-		void Delete(EmployeeTerritory employeeterritory);
+		void Delete(EmployeeTerritory employeeTerritory);
 
-		bool Exists(string employeeId, string territoryId);
+		bool Exists(int employeeId, string territoryId);
 	}
 }

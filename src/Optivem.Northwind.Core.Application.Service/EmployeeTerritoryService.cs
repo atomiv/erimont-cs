@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Optivem.Northwind.Core.Domain.Entity;
+﻿using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Core.Application.Service
 {
@@ -18,14 +17,14 @@ namespace Optivem.Northwind.Core.Application.Service
 			this.repository = unitOfWork.EmployeeTerritoryRepository;
 		}
 
-		public void Add(EmployeeTerritory employeeterritory)
+		public void Add(EmployeeTerritory employeeTerritory)
 		{
-			repository.Add(employeeterritory);
+			repository.Add(employeeTerritory);
 		}
 
-		public void Delete(EmployeeTerritory employeeterritory)
+		public void Delete(EmployeeTerritory employeeTerritory)
 		{
-			repository.Delete(employeeterritory);
+			repository.Delete(employeeTerritory);
 		}
 
 		public Task<IEnumerable<EmployeeTerritory>> GetAsync()
@@ -33,23 +32,19 @@ namespace Optivem.Northwind.Core.Application.Service
 			return repository.GetAsync();
 		}
 
-		public Task<EmployeeTerritory> GetAsync(string employeeId, string territoryId)
+		public Task<EmployeeTerritory> GetAsync(int employeeId, string territoryId)
 		{
-			throw new NotImplementedException();
-
-			// return repository.GetSingleOrDefaultAsync(id);
+			return repository.GetSingleOrDefaultAsync(employeeId, territoryId);
 		}
 
-		public void Update(EmployeeTerritory employeeterritory)
+		public void Update(EmployeeTerritory employeeTerritory)
 		{
-			repository.Update(employeeterritory);
+			repository.Update(employeeTerritory);
 		}
 
-		public bool Exists(string employeeId, string territoryId)
+		public bool Exists(int employeeId, string territoryId)
 		{
-			throw new NotImplementedException();
-
-			// return repository.GetExists();
+			return repository.GetExists(employeeId, territoryId);
 		}
 	}
 }

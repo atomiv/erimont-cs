@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Infrastructure.Repository
 {
-	public class EmployeeTerritoryRepository : EntityFrameworkRepository<NorthwindContext, EmployeeTerritory, string>, IEmployeeTerritoryRepository
+	public class EmployeeTerritoryRepository : EntityFrameworkRepository<NorthwindContext, EmployeeTerritory, int, string>, IEmployeeTerritoryRepository
 	{
 		public EmployeeTerritoryRepository(NorthwindContext context)
 			: base(context)

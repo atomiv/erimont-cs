@@ -37,7 +37,7 @@ namespace Optivem.Northwind.Controllers
 		{
 			string[] parts = SplitId(id);
 
-			string employeeId = parts[0];
+			int employeeId = int.Parse(parts[0]);
 			string territoryId = parts[1];
 
 			var employeeterritory = await service.GetAsync(employeeId, territoryId);
@@ -55,10 +55,10 @@ namespace Optivem.Northwind.Controllers
 		{
 			string[] parts = SplitId(id);
 
-			string employeeId = parts[0];
+			int employeeId = int.Parse(parts[0]);
 			string territoryId = parts[1];
 
-			if (employeeId != employeeterritory.EmployeeId.ToString() || territoryId != employeeterritory.TerritoryId)
+			if (employeeId != employeeterritory.EmployeeId || territoryId != employeeterritory.TerritoryId)
 			{
 				return BadRequest();
 			}
@@ -101,7 +101,7 @@ namespace Optivem.Northwind.Controllers
 		{
 			string[] parts = SplitId(id);
 
-			string employeeId = parts[0];
+			int employeeId = int.Parse(parts[0]);
 			string territoryId = parts[1];
 
 			var employeeterritory = await service.GetAsync(employeeId, territoryId);

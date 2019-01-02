@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Core.Domain.Repository
 {
-	public interface IEmployeeTerritoryRepository : IRepository<EmployeeTerritory, string>
+	public interface IEmployeeTerritoryRepository : IRepository<EmployeeTerritory, int, string>
 	{
 
 	}
