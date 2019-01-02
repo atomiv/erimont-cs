@@ -95,7 +95,10 @@ Inside the project Optivem.Northwind.Core.Application.Service, we have the servi
 ### IoC
 
 Inside the project Optivem.Northwind, inside the class Startup.cs, add the following:
-* services.AddScoped<ISupplierService, SupplierService>();
+* Registering the service: services.AddScoped<ISupplierService, SupplierService>();
+* Adding the mappings for request: e.AddProfile(new SupplierRequestMapping());
+* Adding the mappings for request: e.AddProfile(new SupplierResponseMapping());
+
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-csharp/blob/master/src/Optivem.Northwind/Startup.cs"></script>
 
