@@ -59,6 +59,7 @@ namespace Optivem.Northwind
 			services.AddScoped<IOrderService, OrderService>();
 			services.AddScoped<IOrderDetailService, OrderDetailService>();
 			services.AddScoped<IShipperService, ShipperService>();
+			services.AddScoped<ITerritoryService, TerritoryService>();
 
 		}
 

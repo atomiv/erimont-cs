@@ -27,5 +27,7 @@ namespace Optivem.Northwind.Core.Domain.Repository
 		IOrderDetailRepository OrderDetailRepository { get; }
 
 		IShipperRepository ShipperRepository { get; }
+
+		ITerritoryRepository TerritoryRepository { get; }
 	}
 }
