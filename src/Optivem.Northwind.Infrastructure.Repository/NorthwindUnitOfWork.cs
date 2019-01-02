@@ -19,6 +19,7 @@ namespace Optivem.Northwind.Infrastructure.Repository
 			EmployeeTerritoryRepository = new EmployeeTerritoryRepository(context);
 			OrderRepository = new OrderRepository(context);
 			OrderDetailRepository = new OrderDetailRepository(context);
+			ShipperRepository = new ShipperRepository(context);
 		}
 
         public ISupplierRepository SupplierRepository { get; private set; }
@@ -42,6 +43,8 @@ namespace Optivem.Northwind.Infrastructure.Repository
 		public IOrderRepository OrderRepository { get; private set; }
 
 		public IOrderDetailRepository OrderDetailRepository { get; private set; }
+
+		public IShipperRepository ShipperRepository { get; private set; }
 
 	}
 }
