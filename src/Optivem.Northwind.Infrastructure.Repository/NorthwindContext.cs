@@ -358,9 +358,7 @@ namespace Optivem.Northwind.Infrastructure.Repository
                     .HasForeignKey(d => d.SupplierId)
                     .HasConstraintName("FK_Products_Suppliers");
             });
-
-			// TODO: VC: Update DB script set id key generation
-
+            
             modelBuilder.Entity<Region>(entity =>
             {
                 entity.HasKey(e => e.RegionId);

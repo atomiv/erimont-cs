@@ -1,7 +1,5 @@
 ﻿namespace Optivem.Northwind.Core.Application.Dto
 {
-    // TODO: VC: Distinguishing between create and update requests or not?
-
     public class SupplierRequest
     {
         public int SupplierId { get; set; }

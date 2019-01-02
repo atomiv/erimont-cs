@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="Optivem.Commons.Mapping" Version="1.0.0" />
+    <PackageReference Include="Optivem.Commons.Service" Version="1.0.0" />
+    <PackageReference Include="Optivem.Commons.Service.Default" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
