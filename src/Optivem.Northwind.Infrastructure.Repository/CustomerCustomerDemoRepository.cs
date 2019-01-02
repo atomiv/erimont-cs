@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Infrastructure.Repository
 {
-	public class CustomerCustomerDemoRepository : EntityFrameworkRepository<NorthwindContext, CustomerCustomerDemo, string[]>, ICustomerCustomerDemoRepository
+	public class CustomerCustomerDemoRepository : EntityFrameworkRepository<NorthwindContext, CustomerCustomerDemo, string, string>, ICustomerCustomerDemoRepository
 	{
 		public CustomerCustomerDemoRepository(NorthwindContext context)
 			: base(context)

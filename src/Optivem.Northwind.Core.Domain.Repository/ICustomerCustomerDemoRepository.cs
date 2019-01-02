@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Core.Domain.Repository
 {
-	public interface ICustomerCustomerDemoRepository : IRepository<CustomerCustomerDemo, string[]>
+	public interface ICustomerCustomerDemoRepository : IRepository<CustomerCustomerDemo, string, string>
 	{
 
 	}

@@ -45,8 +45,7 @@ namespace Optivem.Northwind.Core.Application.Service
 
 		public bool Exists(string customerId, string customerTypeId)
 		{
-			var id = new string[] { customerId, customerTypeId };
-			return repository.GetExists(id);
+			return repository.GetExists(customerId, customerTypeId);
 		}
 	}
 }
