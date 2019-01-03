@@ -1015,6 +1015,858 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "api/employees",
+			"item": [
+				{
+					"name": "GET api/employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/employees",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/employees/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/employees/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supplierId\": 30,\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA Serbia\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/employees/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/employeeterritories",
+			"item": [
+				{
+					"name": "GET api/employeeterritories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/employeeterritories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/employeeterritories/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/employeeterritories/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supplierId\": 30,\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA Serbia\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/employeeterritories/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/orders",
+			"item": [
+				{
+					"name": "GET api/orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/orders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/orders/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/orders/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supplierId\": 30,\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA Serbia\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/orders/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/orderdetails",
+			"item": [
+				{
+					"name": "GET api/orderdetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/orderdetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/orderdetails/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/orderdetails/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supplierId\": 30,\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA Serbia\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/orderdetails/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/shippers",
+			"item": [
+				{
+					"name": "GET api/shippers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/shippers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/shippers/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/shippers/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supplierId\": 30,\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA Serbia\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/shippers/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/territories",
+			"item": [
+				{
+					"name": "GET api/territories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST api/territories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET api/territories/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT api/territories/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"supplierId\": 30,\n    \"companyName\": \"Jellybeans\",\n    \"contactName\": \"Shelley Burke\",\n    \"contactTitle\": \"Order Administrator\",\n    \"address\": \"P.O. Box 78934\",\n    \"city\": \"New Orleans\",\n    \"region\": \"LA\",\n    \"postalCode\": \"70117\",\n    \"country\": \"USA Serbia\",\n    \"phone\": \"(100) 555-4822\",\n    \"fax\": null,\n    \"homePage\": \"#CAJUN.HTM#\",\n    \"products\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE api/territories/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:54764/api/suppliers/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54764",
+							"path": [
+								"api",
+								"suppliers",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
