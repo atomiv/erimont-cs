@@ -30,6 +30,10 @@ namespace Optivem.Northwind
             // MVC
             services.AddMvc();
 
+            // CORS
+
+            services.AddCors();
+
             // Mapping
             services.AddAutoMapper(e =>
             {
@@ -71,7 +75,17 @@ namespace Optivem.Northwind
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(options =>
+            {
+                options.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials();
+            });
+
             app.UseMvc();
+
+
         }
     }
 }
