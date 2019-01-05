@@ -15,7 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
     <PackageReference Include="Optivem.Commons.Mapping.AutoMapper" Version="1.0.0" />
-    <PackageReference Include="Optivem.Commons.Persistence.EntityFramework" Version="1.0.1" />
+    <PackageReference Include="Optivem.Commons.Persistence.EntityFramework" Version="1.0.2" />
     <PackageReference Include="Optivem.Commons.RestService.AspNetCore" Version="1.0.0" />
   </ItemGroup>
 
