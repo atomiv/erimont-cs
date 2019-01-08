@@ -1,14 +1,23 @@
-﻿namespace Optivem.Northwind.Core.Domain.Entity
+﻿using System;
+using System.Collections.Generic;
+
+namespace Optivem.Northwind.Core.Domain.Entity
 {
     public partial class OrderDetail
     {
+        public int Id { get; set; }
         public int OrderId { get; set; }
         public int ProductId { get; set; }
+        public decimal Quantity { get; set; }
         public decimal UnitPrice { get; set; }
-        public short Quantity { get; set; }
-        public float Discount { get; set; }
+        public double Discount { get; set; }
+        public byte StatusId { get; set; }
+        public DateTime DateAllocated { get; set; }
+        public int PurchaseOrderId { get; set; }
+        public int InventoryId { get; set; }
 
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
+        public virtual OrderDetailStatus Status { get; set; }
     }
 }

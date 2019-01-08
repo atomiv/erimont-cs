@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Optivem.Northwind.Core.Domain.Entity
 {
@@ -6,22 +7,27 @@ namespace Optivem.Northwind.Core.Domain.Entity
     {
         public Product()
         {
-            OrderDetails = new HashSet<OrderDetail>();
+            InventoryTransaction = new HashSet<InventoryTransaction>();
+            OrderDetail = new HashSet<OrderDetail>();
+            PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
         }
 
-        public int ProductId { get; set; }
+        public int Id { get; set; }
+        public string SupplierId { get; set; }
+        public string ProductCode { get; set; }
         public string ProductName { get; set; }
-        public int? SupplierId { get; set; }
-        public int? CategoryId { get; set; }
+        public string Description { get; set; }
+        public decimal StandardCost { get; set; }
+        public decimal ListPrice { get; set; }
+        public short ReorderLevel { get; set; }
+        public int TargetLevel { get; set; }
         public string QuantityPerUnit { get; set; }
-        public decimal? UnitPrice { get; set; }
-        public short? UnitsInStock { get; set; }
-        public short? UnitsOnOrder { get; set; }
-        public short? ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
+        public short MinimumReorderQuantity { get; set; }
+        public string Category { get; set; }
 
-        public virtual Category Category { get; set; }
-        public virtual Supplier Supplier { get; set; }
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<InventoryTransaction> InventoryTransaction { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetail { get; set; }
+        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
     }
 }

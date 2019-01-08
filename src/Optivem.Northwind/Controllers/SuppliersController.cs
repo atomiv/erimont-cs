@@ -16,8 +16,9 @@ namespace Optivem.Northwind.Controllers
     public class SuppliersController : AspNetCoreCrudController<INorthwindUnitOfWork, ISupplierService, SupplierRequest, SupplierResponse, int>
     {
         public SuppliersController(INorthwindUnitOfWork unitOfWork, ISupplierService service) 
-            : base(unitOfWork, service, e => e.SupplierId, e => e.SupplierId)
+            : base(unitOfWork, service, e => e.Id, e => e.Id)
         {
+
         }
     }
 }

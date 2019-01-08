@@ -52,19 +52,6 @@ namespace Optivem.Northwind
 
             // Application services
             services.AddScoped<ISupplierService, SupplierService>();
-			services.AddScoped<IProductService, ProductService>();
-			services.AddScoped<IRegionService, RegionService>();
-			services.AddScoped<ICategoryService, CategoryService>();
-			services.AddScoped<ICustomerService, CustomerService>();
-			services.AddScoped<ICustomerCustomerDemoService, CustomerCustomerDemoService>();
-			services.AddScoped<ICustomerDemographicService, CustomerDemographicService>();
-			services.AddScoped<IEmployeeService, EmployeeService>();
-			services.AddScoped<IEmployeeTerritoryService, EmployeeTerritoryService>();
-			services.AddScoped<IOrderService, OrderService>();
-			services.AddScoped<IOrderDetailService, OrderDetailService>();
-			services.AddScoped<IShipperService, ShipperService>();
-			services.AddScoped<ITerritoryService, TerritoryService>();
-
 		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

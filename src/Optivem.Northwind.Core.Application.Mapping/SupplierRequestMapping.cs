@@ -7,7 +7,7 @@ namespace Optivem.Northwind.Core.Application.Mapping
     {
         public SupplierRequestMapping()
         {
-            dtoEntityMapping.ForMember(e => e.Products, opt => opt.Ignore());
+            dtoEntityMapping.ForMember(e => e.PurchaseOrder, opt => opt.Ignore());
         }
     }
 }
