@@ -7,7 +7,7 @@ namespace Optivem.Northwind.Core.Application.Mapping
 	{
 		public CustomerRequestMapping()
 		{
-			// TODO: Check if needed
+			// TODO: VC: Check if needed
 			// dtoEntityMapping.ForMember(e => e.Order, opt => opt.Ignore());
 		}
 	}
