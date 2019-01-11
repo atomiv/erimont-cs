@@ -1,4 +1,6 @@
-﻿namespace Optivem.Northwind.Core.Application.Dto
+﻿using System;
+
+namespace Optivem.Northwind.Core.Application.Dto
 {
     public class SupplierResponse
     {

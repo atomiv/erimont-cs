@@ -2,8 +2,8 @@
 
 namespace Optivem.Northwind.Core.Application.Dto
 {
-    public class SupplierRequest
-    {
+	public class CustomerResponse
+	{
 		public int Id { get; set; }
 		public string Company { get; set; }
 		public string LastName { get; set; }

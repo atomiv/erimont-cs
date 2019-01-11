@@ -39,7 +39,11 @@ namespace Optivem.Northwind
             {
                 e.AddProfile(new SupplierRequestMapping());
                 e.AddProfile(new SupplierResponseMapping());
-            });
+				e.AddProfile(new CustomerRequestMapping());
+				e.AddProfile(new CustomerResponseMapping());
+
+
+			});
 
             services.AddScoped<IMappingService, AutoMapperMappingService>();
 
@@ -52,6 +56,23 @@ namespace Optivem.Northwind
 
             // Application services
             services.AddScoped<ISupplierService, SupplierService>();
+			services.AddScoped<ICustomerService, CustomerService>();
+			services.AddScoped<IEmployeeService, EmployeeService>();
+			services.AddScoped<IEmployeePrivilegeService, EmployeePrivilegeService>();
+			services.AddScoped<IInventoryTransactionService, InventoryTransactionService>();
+			services.AddScoped<IInventoryTransactionTypeService, InventoryTransactionTypeService>();
+			services.AddScoped<IInvoiceService, InvoiceService>();
+			services.AddScoped<IOrderService, OrderService>();
+			services.AddScoped<IOrderDetailService, OrderDetailService>();
+			services.AddScoped<IOrderDetailStatusService, OrderDetailStatusService>();
+			services.AddScoped<IOrderStatusService, OrderStatusService>();
+			services.AddScoped<IOrderTaxStatusService, OrderTaxStatusService>();
+			services.AddScoped<IPrivilegeService, PrivilegeService>();
+			services.AddScoped<IProductService, ProductService>();
+			services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
+			services.AddScoped<IPurchaseOrderDetailService, PurchaseOrderDetailService>();
+			services.AddScoped<IPurchaseOrderStatusService, PurchaseOrderStatusService>();
+			services.AddScoped<IShipperService, ShipperService>();
 		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
