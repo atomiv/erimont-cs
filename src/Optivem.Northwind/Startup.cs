@@ -10,6 +10,7 @@ using Optivem.Northwind.Core.Application.Mapping;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Repository;
 using Optivem.Northwind.Infrastructure.Repository;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Optivem.Northwind
 {
@@ -30,9 +31,15 @@ namespace Optivem.Northwind
             // MVC
             services.AddMvc();
 
-            // CORS
+			// Register the Swagger generator, defining 1 or more Swagger documents
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+			});
 
-            services.AddCors();
+			// CORS
+
+			services.AddCors();
 
             // Mapping
             services.AddAutoMapper(e =>
@@ -120,7 +127,17 @@ namespace Optivem.Northwind
                 .AllowCredentials();
             });
 
-            app.UseMvc();
+			// Enable middleware to serve generated Swagger as a JSON endpoint.
+			app.UseSwagger();
+
+			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+			// specifying the Swagger JSON endpoint.
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+			});
+
+			app.UseMvc();
 
 
         }
