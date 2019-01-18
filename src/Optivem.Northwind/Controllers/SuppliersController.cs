@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Optivem.Commons.RestService.AspNetCore;
+using Optivem.Web.Rest.AspNetCore;
 using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Repository;

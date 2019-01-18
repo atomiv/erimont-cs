@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Optivem.Commons.Mapping;
-using Optivem.Commons.Service.Default;
+using Optivem.Infrastructure.Mapping;
+using Optivem.Application.Service.Default;
 using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
