@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Web.Rest", "Optivem.Northwind\Optivem.Northwind.Web.Rest.csproj", "{F8AD8462-32EE-4F71-996E-B9234AC1A6C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Web.AspNetCore.Rest", "Optivem.Northwind\Optivem.Northwind.Web.AspNetCore.Rest.csproj", "{F8AD8462-32EE-4F71-996E-B9234AC1A6C9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Entity", "Optivem.Northwind.Core.Domain.Entity\Optivem.Northwind.Core.Domain.Entity.csproj", "{8CD47F14-9E0C-477A-A0C4-2279C854DD4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastructure.Domain.Repository", "Optivem.Northwind.Infrastructure.Repository\Optivem.Northwind.Infrastructure.Domain.Repository.csproj", "{C5B19B84-CF06-4F3B-8287-81D9405E1C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore", "Optivem.Northwind.Infrastructure.Repository\Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore.csproj", "{C5B19B84-CF06-4F3B-8287-81D9405E1C6F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Repository", "Optivem.Northwind.Core.Domain.Repository\Optivem.Northwind.Core.Domain.Repository.csproj", "{D12D4056-A96A-48B8-AFC1-5283EE506615}"
 EndProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Doma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Dto", "Optivem.Northwind.Core.Application.Dto\Optivem.Northwind.Core.Application.Dto.csproj", "{FB545F98-4523-4BFE-9CE5-D39798DBA743}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastructure.Application.Mapping", "Optivem.Northwind.Core.Application.Mapping\Optivem.Northwind.Infrastructure.Application.Mapping.csproj", "{0492C1A3-43DD-4C3D-B249-3D191E465E94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper", "Optivem.Northwind.Core.Application.Mapping\Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper.csproj", "{0492C1A3-43DD-4C3D-B249-3D191E465E94}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{E4BD2EAA-529A-4ADB-B584-E04C9CC69525}"
 EndProject

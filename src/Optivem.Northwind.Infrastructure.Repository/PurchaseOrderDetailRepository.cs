@@ -2,7 +2,7 @@
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Infrastructure.Domain.Repository
+namespace Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore
 {
 	public class PurchaseOrderDetailRepository : EntityFrameworkRepository<NorthwindContext, PurchaseOrderDetail, int>, IPurchaseOrderDetailRepository
 	{

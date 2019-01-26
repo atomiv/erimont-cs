@@ -2,7 +2,7 @@
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Infrastructure.Domain.Repository
+namespace Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore
 {
 	public class EmployeeRepository : EntityFrameworkRepository<NorthwindContext, Employee, int>, IEmployeeRepository
 	{
