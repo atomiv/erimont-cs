@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Optivem.Northwind.Core.Application.Service;
+using Optivem.Northwind.Core.Application.Service.Default;
 using Optivem.Northwind.Core.Domain.Repository;
 using Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper;
 using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
