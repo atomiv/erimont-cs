@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Optivem.Northwind.Controllers
+namespace Optivem.Northwind.Web.Rest.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller

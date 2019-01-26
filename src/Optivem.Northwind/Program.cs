@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Optivem.Northwind
+namespace Optivem.Northwind.Web.Rest
 {
     public class Program
     {

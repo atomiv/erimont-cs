@@ -12,7 +12,7 @@ using Optivem.Platform.Core.Common.Mapping;
 using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace Optivem.Northwind
+namespace Optivem.Northwind.Web.Rest
 {
     public class Startup
     {

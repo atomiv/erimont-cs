@@ -9,7 +9,7 @@ using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Controllers
+namespace Optivem.Northwind.Web.Rest.Controllers
 {
 	[Route("api/orders")]
 	[ApiController]

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind", "Optivem.Northwind\Optivem.Northwind.csproj", "{F8AD8462-32EE-4F71-996E-B9234AC1A6C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Web.Rest", "Optivem.Northwind\Optivem.Northwind.Web.Rest.csproj", "{F8AD8462-32EE-4F71-996E-B9234AC1A6C9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Entity", "Optivem.Northwind.Core.Domain.Entity\Optivem.Northwind.Core.Domain.Entity.csproj", "{8CD47F14-9E0C-477A-A0C4-2279C854DD4A}"
 EndProject
