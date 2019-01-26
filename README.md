@@ -1,5 +1,8 @@
 # Optivem Northwind (C#)
 
+[![Build Status](https://img.shields.io/appveyor/ci/optivem/northwind-csharp.svg)](https://ci.appveyor.com/project/optivem/northwind-csharp)
+[![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 ## Documentation
 
 [Northwind C# Documentation](https://opensource.optivem.com/northwind-csharp)
