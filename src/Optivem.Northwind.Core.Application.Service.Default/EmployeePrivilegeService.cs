@@ -6,7 +6,7 @@ using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Core.Application.Service
+namespace Optivem.Northwind.Core.Application.Service.Default
 {
 	public class EmployeePrivilegeService : CrudService<IMappingService, INorthwindUnitOfWork, IEmployeePrivilegeRepository, EmployeePrivilegeRequest, EmployeePrivilegeResponse, EmployeePrivilege, int>, IEmployeePrivilegeService
 	{

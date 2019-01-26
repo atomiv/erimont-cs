@@ -6,7 +6,7 @@ using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Core.Application.Service
+namespace Optivem.Northwind.Core.Application.Service.Default
 {
 	public class InvoiceService : CrudService<IMappingService, INorthwindUnitOfWork, IInvoiceRepository, InvoiceRequest, InvoiceResponse, Invoice, int>, IInvoiceService
 	{
