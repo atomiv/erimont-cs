@@ -1,4 +1,4 @@
-﻿using Optivem.Application.Service;
+﻿using Optivem.Platform.Core.Application.Service;
 using Optivem.Northwind.Core.Application.Dto;
 using System.Collections.Generic;
 using System.Threading.Tasks;

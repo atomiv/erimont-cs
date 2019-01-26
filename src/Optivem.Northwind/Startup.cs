@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Optivem.Infrastructure.Mapping;
-using Optivem.Infrastructure.Mapping.AutoMapper;
 using Optivem.Northwind.Core.Application.Mapping;
 using Optivem.Northwind.Core.Application.Service;
 using Optivem.Northwind.Core.Domain.Repository;
 using Optivem.Northwind.Infrastructure.Repository;
+using Optivem.Platform.Core.Common.Mapping;
+using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Optivem.Northwind

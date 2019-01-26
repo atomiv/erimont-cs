@@ -1,4 +1,4 @@
-﻿using Optivem.Infrastructure.Repository;
+﻿using Optivem.Platform.Core.Common.Repository;
 
 namespace Optivem.Northwind.Core.Domain.Repository
 {
