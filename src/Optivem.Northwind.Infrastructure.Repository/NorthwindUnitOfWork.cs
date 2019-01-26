@@ -1,7 +1,7 @@
 ﻿using Optivem.Platform.Infrastructure.Common.Repository.EntityFramework;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Infrastructure.Repository
+namespace Optivem.Northwind.Infrastructure.Domain.Repository
 {
     public class NorthwindUnitOfWork : EntityFrameworkUnitOfWork<NorthwindContext>, INorthwindUnitOfWork
     {

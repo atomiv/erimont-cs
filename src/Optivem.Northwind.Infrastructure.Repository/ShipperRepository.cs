@@ -2,7 +2,7 @@
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Infrastructure.Repository
+namespace Optivem.Northwind.Infrastructure.Domain.Repository
 {
 	public class ShipperRepository : EntityFrameworkRepository<NorthwindContext, Shipper, int>, IShipperRepository
 	{

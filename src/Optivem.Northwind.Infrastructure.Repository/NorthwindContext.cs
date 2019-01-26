@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Optivem.Northwind.Core.Domain.Entity;
 
-namespace Optivem.Northwind.Infrastructure.Repository
+namespace Optivem.Northwind.Infrastructure.Domain.Repository
 {
     public partial class NorthwindContext : DbContext
     {

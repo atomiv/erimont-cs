@@ -25,10 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Optivem.Northwind.Core.Application.Mapping\Optivem.Northwind.Core.Application.Mapping.csproj" />
+    <ProjectReference Include="..\Optivem.Northwind.Core.Application.Mapping\Optivem.Northwind.Infrastructure.Application.Mapping.csproj" />
     <ProjectReference Include="..\Optivem.Northwind.Core.Application.Service\Optivem.Northwind.Core.Application.Service.csproj" />
     <ProjectReference Include="..\Optivem.Northwind.Core.Domain.Service\Optivem.Northwind.Core.Domain.Service.csproj" />
-    <ProjectReference Include="..\Optivem.Northwind.Infrastructure.Repository\Optivem.Northwind.Infrastructure.Repository.csproj" />
+    <ProjectReference Include="..\Optivem.Northwind.Infrastructure.Repository\Optivem.Northwind.Infrastructure.Domain.Repository.csproj" />
   </ItemGroup>
 
 </Project>

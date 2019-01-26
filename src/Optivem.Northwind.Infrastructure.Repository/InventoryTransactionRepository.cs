@@ -2,7 +2,7 @@
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
-namespace Optivem.Northwind.Infrastructure.Repository
+namespace Optivem.Northwind.Infrastructure.Domain.Repository
 {
 	public class InventoryTransactionRepository : EntityFrameworkRepository<NorthwindContext, InventoryTransaction, int>, IInventoryTransactionRepository
 	{

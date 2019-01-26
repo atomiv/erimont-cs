@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Optivem.Northwind.Core.Application.Mapping
+namespace Optivem.Northwind.Infrastructure.Application.Mapping
 {
     public class BaseMapping<TEntity, TDto> : Profile
     {
