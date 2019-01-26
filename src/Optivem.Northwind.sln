@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{DAC3BE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{6B6A2A04-0201-4380-9202-5444C87A0D07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optivem.Northwind.Core.Application.Service.Default", "Optivem.Northwind.Core.Application.Service.Default\Optivem.Northwind.Core.Application.Service.Default.csproj", "{A21577E7-E55F-477D-9760-4F90AAFB76F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{0492C1A3-43DD-4C3D-B249-3D191E465E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0492C1A3-43DD-4C3D-B249-3D191E465E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0492C1A3-43DD-4C3D-B249-3D191E465E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21577E7-E55F-477D-9760-4F90AAFB76F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21577E7-E55F-477D-9760-4F90AAFB76F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21577E7-E55F-477D-9760-4F90AAFB76F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21577E7-E55F-477D-9760-4F90AAFB76F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{AF899037-1BA1-4F90-A8FB-273873D0E656} = {420AD006-2C8E-4EC8-B549-A78FE7456371}
 		{DAC3BE80-5714-4FFB-AB60-E482BB291FAC} = {4906C6B9-A3D1-4118-80B7-FF99F7BF2FC3}
 		{6B6A2A04-0201-4380-9202-5444C87A0D07} = {4906C6B9-A3D1-4118-80B7-FF99F7BF2FC3}
+		{A21577E7-E55F-477D-9760-4F90AAFB76F2} = {9B05309C-7477-41DB-A2BA-66932B8E3098}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5FBA9E2-D101-4475-95BB-CF15D4D71F05}
