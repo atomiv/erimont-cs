@@ -2,6 +2,8 @@
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
+    // TODO: VC: Remove from here, this will be in platform
+
     public class BaseMapping<TEntity, TDto> : Profile
     {
         protected IMappingExpression<TEntity, TDto> entityDtoMapping;
