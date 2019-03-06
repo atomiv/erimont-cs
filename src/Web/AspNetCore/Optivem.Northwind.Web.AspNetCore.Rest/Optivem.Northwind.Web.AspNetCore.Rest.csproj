@@ -12,9 +12,9 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.2" />
     <PackageReference Include="Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper" Version="1.0.3" />
     <PackageReference Include="Optivem.Platform.Web.AspNetCore.Rest" Version="1.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
