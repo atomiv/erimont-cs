@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190309201603_Updates.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.2" />
     <PackageReference Include="Optivem.Platform.Infrastructure.Common.Repository.EntityFrameworkCore" Version="1.0.3" />
   </ItemGroup>
