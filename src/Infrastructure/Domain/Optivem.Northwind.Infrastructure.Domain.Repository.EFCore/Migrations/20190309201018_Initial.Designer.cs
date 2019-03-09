@@ -10,7 +10,7 @@ using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
 namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Migrations
 {
     [DbContext(typeof(NorthwindContext))]
-    [Migration("20190309192432_Initial")]
+    [Migration("20190309201018_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
