@@ -15,9 +15,11 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuratio
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.Property(e => e.Description).IsRequired();
+            builder.Property(e => e.Description)
+                .IsRequired();
 
-            builder.Property(e => e.ListPrice).HasColumnType("money");
+            builder.Property(e => e.ListPrice)
+                .HasColumnType("money");
 
             builder.Property(e => e.ProductCode)
                 .IsRequired()
@@ -31,9 +33,11 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuratio
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.Property(e => e.StandardCost).HasColumnType("money");
+            builder.Property(e => e.StandardCost)
+                .HasColumnType("money");
 
-            builder.Property(e => e.SupplierId).IsRequired();
+            builder.Property(e => e.SupplierId)
+                .IsRequired();
         }
     }
 }

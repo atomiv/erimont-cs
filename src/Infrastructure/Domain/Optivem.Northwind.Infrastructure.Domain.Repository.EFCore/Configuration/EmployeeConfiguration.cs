@@ -33,13 +33,15 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuratio
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.Property(e => e.FaxNumber).HasMaxLength(25);
+            builder.Property(e => e.FaxNumber)
+                .HasMaxLength(25);
 
             builder.Property(e => e.FirstName)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.Property(e => e.HomePhone).HasMaxLength(25);
+            builder.Property(e => e.HomePhone)
+                .HasMaxLength(25);
 
             builder.Property(e => e.JobTitle)
                 .IsRequired()

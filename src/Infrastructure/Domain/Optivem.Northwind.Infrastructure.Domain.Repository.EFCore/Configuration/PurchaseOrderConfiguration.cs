@@ -11,25 +11,33 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuratio
     {
         public void Configure(EntityTypeBuilder<PurchaseOrder> builder)
         {
-            builder.Property(e => e.ApprovedDate).HasColumnType("datetime");
+            builder.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime");
 
-            builder.Property(e => e.CreationDate).HasColumnType("datetime");
+            builder.Property(e => e.CreationDate)
+                .HasColumnType("datetime");
 
-            builder.Property(e => e.ExpectedDate).HasColumnType("datetime");
+            builder.Property(e => e.ExpectedDate)
+                .HasColumnType("datetime");
 
-            builder.Property(e => e.PaymentAmount).HasColumnType("money");
+            builder.Property(e => e.PaymentAmount)
+                .HasColumnType("money");
 
-            builder.Property(e => e.PaymentDate).HasColumnType("datetime");
+            builder.Property(e => e.PaymentDate)
+                .HasColumnType("datetime");
 
             builder.Property(e => e.PaymentMethod)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.Property(e => e.ShippingFee).HasColumnType("money");
+            builder.Property(e => e.ShippingFee)
+                .HasColumnType("money");
 
-            builder.Property(e => e.SubmittedDate).HasColumnType("datetime");
+            builder.Property(e => e.SubmittedDate)
+                .HasColumnType("datetime");
 
-            builder.Property(e => e.Taxes).HasColumnType("money");
+            builder.Property(e => e.Taxes)
+                .HasColumnType("money");
 
             builder.HasOne(d => d.CreatedByNavigation)
                 .WithMany(p => p.PurchaseOrder)

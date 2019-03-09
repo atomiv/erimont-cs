@@ -11,11 +11,14 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuratio
     {
         public void Configure(EntityTypeBuilder<PurchaseOrderDetail> builder)
         {
-            builder.Property(e => e.DateReceived).HasColumnType("datetime");
+            builder.Property(e => e.DateReceived)
+                .HasColumnType("datetime");
 
-            builder.Property(e => e.Quantity).HasColumnType("decimal(18, 4)");
+            builder.Property(e => e.Quantity)
+                .HasColumnType("decimal(18, 4)");
 
-            builder.Property(e => e.UnitCost).HasColumnType("money");
+            builder.Property(e => e.UnitCost)
+                .HasColumnType("money");
 
             builder.HasOne(d => d.Inventory)
                 .WithMany(p => p.PurchaseOrderDetail)

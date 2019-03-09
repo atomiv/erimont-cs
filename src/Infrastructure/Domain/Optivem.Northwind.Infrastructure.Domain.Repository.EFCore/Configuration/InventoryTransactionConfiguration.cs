@@ -11,11 +11,14 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuratio
     {
         public void Configure(EntityTypeBuilder<InventoryTransaction> builder)
         {
-            builder.Property(e => e.Comments).HasMaxLength(255);
+            builder.Property(e => e.Comments)
+                .HasMaxLength(255);
 
-            builder.Property(e => e.TransactionCreatedDate).HasColumnType("datetime");
+            builder.Property(e => e.TransactionCreatedDate)
+                .HasColumnType("datetime");
 
-            builder.Property(e => e.TransactionModifiedDate).HasColumnType("datetime");
+            builder.Property(e => e.TransactionModifiedDate)
+                .HasColumnType("datetime");
 
             builder.HasOne(d => d.CustomerOrder)
                 .WithMany(p => p.InventoryTransaction)
