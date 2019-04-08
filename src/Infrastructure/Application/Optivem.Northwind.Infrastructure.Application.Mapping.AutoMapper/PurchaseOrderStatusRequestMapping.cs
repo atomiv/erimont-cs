@@ -1,13 +1,11 @@
 ﻿using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
+using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-	public class PurchaseOrderStatusRequestMapping : BaseMapping<PurchaseOrderStatus, PurchaseOrderStatusRequest>
+	public class PurchaseOrderStatusRequestMapping : AutoMapperRequestProfile<PurchaseOrderStatus, PurchaseOrderStatusRequest>
 	{
-		public PurchaseOrderStatusRequestMapping()
-		{
-			// dtoEntityMapping.ForMember(e => e.PurchaseOrder, opt => opt.Ignore());
-		}
+
 	}
 }

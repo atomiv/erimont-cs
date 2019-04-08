@@ -1,14 +1,11 @@
 ﻿using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
+using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-	public class CustomerResponseMapping : BaseMapping<Customer, CustomerResponse>
+	public class CustomerResponseMapping : AutoMapperResponseProfile<Customer, CustomerResponse>
 	{
-		public CustomerResponseMapping()
-		{
-			// TODO: VC: Check if needed
-			// dtoEntityMapping.ForMember(e => e.Order, opt => opt.Ignore());
-		}
+
 	}
 }

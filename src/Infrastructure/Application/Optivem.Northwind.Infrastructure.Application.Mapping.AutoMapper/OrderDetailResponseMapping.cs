@@ -1,13 +1,11 @@
 ﻿using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
+using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-	public class OrderDetailResponseMapping : BaseMapping<OrderDetail, OrderDetailResponse>
+	public class OrderDetailResponseMapping : AutoMapperResponseProfile<OrderDetail, OrderDetailResponse>
 	{
-		public OrderDetailResponseMapping()
-		{
-			// dtoEntityMapping.ForMember(e => e.PurchaseOrder, opt => opt.Ignore());
-		}
+
 	}
 }

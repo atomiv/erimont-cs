@@ -1,13 +1,11 @@
 ﻿using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
+using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-	public class PrivilegeResponseMapping : BaseMapping<Privilege, PrivilegeResponse>
+	public class PrivilegeResponseMapping : AutoMapperResponseProfile<Privilege, PrivilegeResponse>
 	{
-		public PrivilegeResponseMapping()
-		{
-			// dtoEntityMapping.ForMember(e => e.PurchaseOrder, opt => opt.Ignore());
-		}
+
 	}
 }

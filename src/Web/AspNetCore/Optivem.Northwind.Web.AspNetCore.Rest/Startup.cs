@@ -12,6 +12,7 @@ using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
 using Optivem.Platform.Core.Common.Mapping;
 using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
+using System.Reflection;
 
 namespace Optivem.Northwind.Web.Rest
 {
@@ -42,9 +43,21 @@ namespace Optivem.Northwind.Web.Rest
 
 			services.AddCors();
 
+
             // Mapping
+
+
+            services.AddScoped<IMappingService, AutoMapperMappingService>();
+
+            services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
+
+            
+            /*
             services.AddAutoMapper(e =>
             {
+                // TODO: VC: This causes exception
+
+
                 e.AddProfile(new SupplierRequestMapping());
                 e.AddProfile(new SupplierResponseMapping());
 				e.AddProfile(new CustomerRequestMapping());
@@ -79,10 +92,12 @@ namespace Optivem.Northwind.Web.Rest
 				e.AddProfile(new PurchaseOrderStatusResponseMapping());
 				e.AddProfile(new ShipperRequestMapping());
 				e.AddProfile(new ShipperResponseMapping());
+                
 
 			});
+            */
+            
 
-            services.AddScoped<IMappingService, AutoMapperMappingService>();
 
             // DB Context
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);

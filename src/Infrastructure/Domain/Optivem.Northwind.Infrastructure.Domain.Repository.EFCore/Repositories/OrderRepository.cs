@@ -1,4 +1,4 @@
-﻿using Optivem.Platform.Infrastructure.Common.Repository.EntityFramework;
+﻿using Optivem.Platform.Infrastructure.Common.Repository.EntityFrameworkCore;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
 
