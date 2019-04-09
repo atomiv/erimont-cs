@@ -20,7 +20,7 @@ The following example illustrates the example for suppliers.
 Inside Optivem.Northwind.Core.Domain.Entity, we have:
 * Supplier.cs
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Optivem.Northwind.Core.Domain.Entity/Supplier.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Domain/Optivem.Northwind.Core.Domain.Entity/Supplier.cs"></script>
 
 ### Repository - Interface
 
