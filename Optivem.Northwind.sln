@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Web.AspNetCore.Rest", "src\Web\AspNetCore\Rest\Optivem.Northwind.Web.AspNetCore.Rest.csproj", "{A86ADF20-E754-493B-B513-DB9D6D1560E3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F57ACA43-CCAD-46B6-A779-354EB3CEA5B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
