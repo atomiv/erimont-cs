@@ -33,30 +33,26 @@ namespace Optivem.Northwind.Web.Rest
             // MVC
             services.AddMvc();
 
-			// Register the Swagger generator, defining 1 or more Swagger documents
-			services.AddSwaggerGen(c =>
-			{
-				c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
-			});
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            });
 
-			// CORS
+            // CORS
 
-			services.AddCors();
-
+            services.AddCors();
 
             // Mapping
-
 
             services.AddScoped<IMappingService, AutoMapperMappingService>();
 
             services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
 
-            
             /*
             services.AddAutoMapper(e =>
             {
                 // TODO: VC: This causes exception
-
 
                 e.AddProfile(new SupplierRequestMapping());
                 e.AddProfile(new SupplierResponseMapping());
@@ -92,12 +88,8 @@ namespace Optivem.Northwind.Web.Rest
 				e.AddProfile(new PurchaseOrderStatusResponseMapping());
 				e.AddProfile(new ShipperRequestMapping());
 				e.AddProfile(new ShipperResponseMapping());
-                
-
 			});
             */
-            
-
 
             // DB Context
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);
@@ -108,24 +100,24 @@ namespace Optivem.Northwind.Web.Rest
 
             // Application services
             services.AddScoped<ISupplierService, SupplierService>();
-			services.AddScoped<ICustomerService, CustomerService>();
-			services.AddScoped<IEmployeeService, EmployeeService>();
-			services.AddScoped<IEmployeePrivilegeService, EmployeePrivilegeService>();
-			services.AddScoped<IInventoryTransactionService, InventoryTransactionService>();
-			services.AddScoped<IInventoryTransactionTypeService, InventoryTransactionTypeService>();
-			services.AddScoped<IInvoiceService, InvoiceService>();
-			services.AddScoped<IOrderService, OrderService>();
-			services.AddScoped<IOrderDetailService, OrderDetailService>();
-			services.AddScoped<IOrderDetailStatusService, OrderDetailStatusService>();
-			services.AddScoped<IOrderStatusService, OrderStatusService>();
-			services.AddScoped<IOrderTaxStatusService, OrderTaxStatusService>();
-			services.AddScoped<IPrivilegeService, PrivilegeService>();
-			services.AddScoped<IProductService, ProductService>();
-			services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
-			services.AddScoped<IPurchaseOrderDetailService, PurchaseOrderDetailService>();
-			services.AddScoped<IPurchaseOrderStatusService, PurchaseOrderStatusService>();
-			services.AddScoped<IShipperService, ShipperService>();
-		}
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IEmployeePrivilegeService, EmployeePrivilegeService>();
+            services.AddScoped<IInventoryTransactionService, InventoryTransactionService>();
+            services.AddScoped<IInventoryTransactionTypeService, InventoryTransactionTypeService>();
+            services.AddScoped<IInvoiceService, InvoiceService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderDetailService, OrderDetailService>();
+            services.AddScoped<IOrderDetailStatusService, OrderDetailStatusService>();
+            services.AddScoped<IOrderStatusService, OrderStatusService>();
+            services.AddScoped<IOrderTaxStatusService, OrderTaxStatusService>();
+            services.AddScoped<IPrivilegeService, PrivilegeService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
+            services.AddScoped<IPurchaseOrderDetailService, PurchaseOrderDetailService>();
+            services.AddScoped<IPurchaseOrderStatusService, PurchaseOrderStatusService>();
+            services.AddScoped<IShipperService, ShipperService>();
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -143,19 +135,17 @@ namespace Optivem.Northwind.Web.Rest
                 .AllowCredentials();
             });
 
-			// Enable middleware to serve generated Swagger as a JSON endpoint.
-			app.UseSwagger();
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
 
-			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
-			// specifying the Swagger JSON endpoint.
-			app.UseSwaggerUI(c =>
-			{
-				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-			});
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
-			app.UseMvc();
-
-
+            app.UseMvc();
         }
     }
 }

@@ -1,19 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Optivem.Platform.Core.Common.Mapping;
-using Optivem.Platform.Core.Application.Service.Default;
-using Optivem.Northwind.Core.Application.Dto;
+﻿using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Core.Domain.Repository;
+using Optivem.Platform.Core.Application.Service.Default;
+using Optivem.Platform.Core.Common.Mapping;
 
 namespace Optivem.Northwind.Core.Application.Service.Default
 {
-	public class InventoryTransactionService : CrudService<IMappingService, INorthwindUnitOfWork, IInventoryTransactionRepository, InventoryTransactionRequest, InventoryTransactionResponse, InventoryTransaction, int>, IInventoryTransactionService
-	{
-		public InventoryTransactionService(IMappingService mappingService, INorthwindUnitOfWork unitOfWork)
-			: base(mappingService, unitOfWork, uow => uow.InventoryTransactionRepository)
-		{
-
-		}
-	}
+    public class InventoryTransactionService : CrudService<IMappingService, INorthwindUnitOfWork, IInventoryTransactionRepository, InventoryTransactionRequest, InventoryTransactionResponse, InventoryTransaction, int>, IInventoryTransactionService
+    {
+        public InventoryTransactionService(IMappingService mappingService, INorthwindUnitOfWork unitOfWork)
+            : base(mappingService, unitOfWork, uow => uow.InventoryTransactionRepository)
+        {
+        }
+    }
 }

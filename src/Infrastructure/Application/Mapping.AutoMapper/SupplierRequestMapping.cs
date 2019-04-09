@@ -6,6 +6,5 @@ namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
     public class SupplierRequestMapping : AutoMapperRequestProfile<Supplier, SupplierRequest>
     {
-
     }
 }

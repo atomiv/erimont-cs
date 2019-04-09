@@ -4,8 +4,7 @@ using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-	public class PurchaseOrderDetailResponseMapping : AutoMapperResponseProfile<PurchaseOrderDetail, PurchaseOrderDetailResponse>
-	{
-
-	}
+    public class PurchaseOrderDetailResponseMapping : AutoMapperResponseProfile<PurchaseOrderDetail, PurchaseOrderDetailResponse>
+    {
+    }
 }

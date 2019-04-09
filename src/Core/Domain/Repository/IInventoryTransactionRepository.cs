@@ -1,10 +1,9 @@
-﻿using Optivem.Platform.Core.Common.Repository;
-using Optivem.Northwind.Core.Domain.Entity;
+﻿using Optivem.Northwind.Core.Domain.Entity;
+using Optivem.Platform.Core.Common.Repository;
 
 namespace Optivem.Northwind.Core.Domain.Repository
 {
-	public interface IInventoryTransactionRepository : IRepository<InventoryTransaction, int>
-	{
-
-	}
+    public interface IInventoryTransactionRepository : IRepository<InventoryTransaction, int>
+    {
+    }
 }

@@ -1,12 +1,9 @@
-﻿using Optivem.Platform.Core.Application.Service;
-using Optivem.Northwind.Core.Application.Dto;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using Optivem.Northwind.Core.Application.Dto;
+using Optivem.Platform.Core.Application.Service;
 
 namespace Optivem.Northwind.Core.Application.Service
 {
-	public interface IEmployeePrivilegeService : ICrudService<EmployeePrivilegeRequest, EmployeePrivilegeResponse, int>
-	{
-
-	}
+    public interface IEmployeePrivilegeService : ICrudService<EmployeePrivilegeRequest, EmployeePrivilegeResponse, int>
+    {
+    }
 }

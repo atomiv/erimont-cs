@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Optivem.Northwind.Core.Application.Dto
+﻿namespace Optivem.Northwind.Core.Application.Dto
 {
-	public class InventoryTransactionTypeRequest
-	{
-		public byte Id { get; set; }
-		public string Code { get; set; }
-	}
+    public class InventoryTransactionTypeRequest
+    {
+        public byte Id { get; set; }
+        public string Code { get; set; }
+    }
 }

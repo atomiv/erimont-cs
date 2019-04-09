@@ -54,7 +54,7 @@ Inside that same project, we also add the repository SupplierRepository to the u
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Domain/Repository.EntityFrameworkCore/NorthwindUnitOfWork.cs"></script>
 
-## Application
+### Application
 
 We implement request mapping using AutoMapper in the project Optivem.Northwind.Infrastructure.Application.Mapping. For example, we have implemented SupplierRequestMapping:
 

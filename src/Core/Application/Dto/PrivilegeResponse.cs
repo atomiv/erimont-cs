@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Optivem.Northwind.Core.Application.Dto
+﻿namespace Optivem.Northwind.Core.Application.Dto
 {
-	public class PrivilegeResponse
-	{
-		public int Id { get; set; }
-		public string PrivilegeName { get; set; }
-	}
+    public class PrivilegeResponse
+    {
+        public int Id { get; set; }
+        public string PrivilegeName { get; set; }
+    }
 }

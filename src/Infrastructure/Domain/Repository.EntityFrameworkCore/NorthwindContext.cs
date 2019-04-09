@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuration;
@@ -53,8 +51,8 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore
         public virtual DbSet<Shipper> Shipper { get; set; }
 
         public virtual DbSet<Supplier> Supplier { get; set; }
-		
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.0-rtm-35687");
 
@@ -79,9 +77,9 @@ namespace Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore
 
             // TODO: VC: Check whether to use singular or plural
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
-			{
-				entityType.Relational().TableName = entityType.DisplayName();
-			}
-		}
+            {
+                entityType.Relational().TableName = entityType.DisplayName();
+            }
+        }
     }
 }
