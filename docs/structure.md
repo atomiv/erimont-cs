@@ -6,78 +6,61 @@ The following example illustrates the example for suppliers.
 
 ### Domain
 
-Inside Optivem.Northwind.Core.Domain.Entity, we have:
-* Supplier.cs
+Entities are implemented in the project Optivem.Northwind.Core.Domain.Entity. For example, we have the Supplier entity:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Domain/Entity/Supplier.cs"></script>
 
-Inside the project Optivem.Northwind.Core.Domain.Repository, create the repository interface:
-* ISupplierRepository.cs
+Interfaces for repositories are declared in the project Optivem.Northwind.Core.Domain.Repository. For example, we have ISupplierRepository, which is the repository interface for working with suppliers:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Domain/Repository/ISupplierRepository.cs"></script>
 
-Inside the project Optivem.Northwind.Core.Domain.Repository, inside INorthwindUnitOfWork.cs, reference the following:
-* ISupplierRepository SupplierRepository { get; }
+Aside from adding the repository in Optivem.Northwind.Core.Domain.Repository, we also register it in the unit of work INorthwindUnitOfWork. For example, we register ISupplierRepository as a property below:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Domain/Repository/INorthwindUnitOfWork.cs"></script>
 
 ### Application
 
-Inside the project Optivem.Northwind.Core.Application.Dto, we have the class:
-* SupplierRequest.cs
+Dtos are referenced in the project Optivem.Northwind.Core.Application.Dto. For example, we have the SupplierRequest:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Application/Dto/SupplierRequest.cs"></script>
 
-Inside the project Optivem.Northwind.Core.Application.Dto, we have the class:
-* SupplierResponse.cs
+In that same project, we also have the SupplierResponse:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Application/Dto/SupplierResponse.cs"></script>
 
-Inside the project Optivem.Northwind.Core.Application.Service, we have the service interface:
-* ISupplierService.cs
+We declare the interfaces for services in the project Optivem.Northwind.Core.Application.Service. For example, we have the interface ISupplierService:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Application/Service/ISupplierService.cs"></script>
 
-Inside the project Optivem.Northwind.Core.Application.Service.Default, we have the service implementation:
-* SupplierService
+Then we need to implement the services in the project Optivem.Northwind.Core.Application.Service.Default. For example, we have implemented SupplierService:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Application/Service.Default/SupplierService.cs"></script>
 
 ### Infrastructure
 
-Inside the project Optivem.Northwind.Infrastructure.Repository, provide the implementation for that interface:
-* SupplierRepository.cs
+We implement repositories using the EntityFrameworkCore implementation in the project Optivem.Northwind.Infrastructure.Repository.EntityFrameworkCore (note: we could have used other providers). For example, we have implemented SupplierRepository:
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Domain/Repository/SupplierRepository.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Domain/Repository.EntityFrameworkCore/SupplierRepository.cs"></script>
 
-Inside the project Optivem.Northwind.Infrastructure.Repository, we reference the SupplierRepository in the following class:
-* NorthwindUnitOfWork.cs
+Inside that same project, we also add the repository SupplierRepository to the unit of work class NorthwindUnitOfWork:
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Domain/Repository/NorthwindUnitOfWork.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Domain/Repository.EntityFrameworkCore/NorthwindUnitOfWork.cs"></script>
 
-Inside the project Optivem.Northwind.Core.Application.Mapping, we have the class:
-* SupplierRequestMapping
+We also implement request mapping using AutoMapper in the project Optivem.Northwind.Infrastructure.Application.Mapping. For example, we have implemented SupplierRequestMapping:
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Mapping.AutoMapper/SupplierRequestMapping.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Application/Mapping.AutoMapper/SupplierRequestMapping.cs"></script>
 
+Furthermore, inside that same project we also implement the response mapping. For example, we have implemented SupplierResponseMapping:
 
-Inside the project Optivem.Northwind.Core.Application.Mapping, we have the class:
-* SupplierResponseMapping
-
-<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Mapping.AutomMapper/SupplierResponseMapping.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Application/Mapping.AutoMapper/SupplierResponseMapping.cs"></script>
 
 ### Web
 
-
-Inside the project Optivem.Northwind.Web.AspNetCore.Rest, we register SupplierService, SupplierRequestMapping and SupplierResponseMapping inside the following class:
-* Startup.cs
+Inside the project Optivem.Northwind.Web.AspNetCore.Rest, we register the services and the mappings inside Startup. For example, we have registered SupplierService, SupplierRequestMapping and SupplierResponseMapping:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Web/AspNetCore/Rest/Startup.cs"></script>
 
-### Controller
-
-Inside the project Optivem.Northwind.Web.AspNetCore.Rest, folder Controllers, we have the class (note the plural name):
-* SuppliersController
+Furthermore, in that project, inside the folder Controllers we also need to implement the controllers. For example, we have implemented SuppliersController:
 
 <script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Web/AspNetCore/Rest/Controllers/SuppliersController.cs"></script>
 
