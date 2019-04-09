@@ -14,7 +14,7 @@ Inside Optivem.Northwind.Core.Domain.Entity, we have:
 Inside the project Optivem.Northwind.Core.Domain.Repository, create the repository interface:
 * ISupplierRepository.cs
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Optivem.Northwind.Core.Domain.Repository/ISupplierRepository.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Core/Domain/Optivem.Northwind.Core.Domain.Repository/ISupplierRepository.cs"></script>
 
 ### Repository - Implementation
 
