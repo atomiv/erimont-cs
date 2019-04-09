@@ -40,7 +40,7 @@ Then we need to implement the services in the project Optivem.Northwind.Core.App
 
 We implement repositories using the EntityFrameworkCore implementation in the project Optivem.Northwind.Infrastructure.Repository.EntityFrameworkCore (note: we could have used other providers). For example, we have implemented SupplierRepository:
 
-<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Domain/Repository.EntityFrameworkCore/SupplierRepository.cs"></script>
+<script src="https://gist-it.appspot.com/github/optivem/northwind-dotnetcore/blob/master/src/Infrastructure/Domain/Repository.EntityFrameworkCore/Repositories/SupplierRepository.cs"></script>
 
 Inside that same project, we also add the repository SupplierRepository to the unit of work class NorthwindUnitOfWork:
 
