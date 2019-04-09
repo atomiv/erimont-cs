@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Domain\Optivem.Northwind.Core.Domain.Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
-    <ProjectReference Include="..\..\..\Core\Domain\Optivem.Northwind.Core.Domain.Repository\Optivem.Northwind.Core.Domain.Repository.csproj" />
+    <ProjectReference Include="..\..\..\Core\Domain\Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
+    <ProjectReference Include="..\..\..\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repository.csproj" />
   </ItemGroup>
   
 </Project>

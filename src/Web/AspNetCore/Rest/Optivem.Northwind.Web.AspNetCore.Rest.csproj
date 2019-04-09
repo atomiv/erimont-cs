@@ -24,12 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Application\Optivem.Northwind.Core.Application.Dto\Optivem.Northwind.Core.Application.Dto.csproj" />
-    <ProjectReference Include="..\..\..\Core\Application\Optivem.Northwind.Core.Application.Service.Default\Optivem.Northwind.Core.Application.Service.Default.csproj" />
-    <ProjectReference Include="..\..\..\Core\Application\Optivem.Northwind.Core.Application.Service\Optivem.Northwind.Core.Application.Service.csproj" />
-    <ProjectReference Include="..\..\..\Core\Domain\Optivem.Northwind.Core.Domain.Repository\Optivem.Northwind.Core.Domain.Repository.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\Application\Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper\Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\Domain\Optivem.Northwind.Infrastructure.Domain.Repository.EFCore\Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.csproj" />
+    <ProjectReference Include="..\..\..\Core\Application\Service.Default\Optivem.Northwind.Core.Application.Service.Default.csproj" />
+    <ProjectReference Include="..\..\..\Core\Application\Service\Optivem.Northwind.Core.Application.Service.csproj" />
+    <ProjectReference Include="..\..\..\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repository.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\Application\Mapping.AutoMapper\Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\Domain\Repository.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>

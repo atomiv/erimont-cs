@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Optivem.Northwind.Core.Domain.Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
   </ItemGroup>
 
 </Project>
