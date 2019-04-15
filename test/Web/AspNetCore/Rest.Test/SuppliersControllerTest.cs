@@ -52,5 +52,10 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test
         }
 
         // TODO: VC: Platform - consider testing for AutoMapperProfile bases in platform... also perhaps AutoMapper specifically for web, i.e. the request, response, etc
+
+        // TODO: VC: IN platform, base class for the controller fixtures and for controller tests - this is useful for testing that the mappings are configured well.... so could test retrieval, and crud submission
+        // TODO: VC: After crud works well then move onto process
+
+        // TODO: VC: Special handling for enums, e.g. statuses
     }
 }
