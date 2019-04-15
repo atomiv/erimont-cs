@@ -4,7 +4,7 @@ using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-    public class ProductRequestMapping : AutoMapperRequestProfile<Product, ProductRequest>
+    public class ProductRequestMapping : AutoMapperRequestProfile<ProductRequest, Product>
     {
     }
 }

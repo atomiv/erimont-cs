@@ -1,5 +1,7 @@
 ﻿using Optivem.Northwind.Core.Domain.Repository;
+using Optivem.Platform.Core.Common.Repository;
 using Optivem.Platform.Infrastructure.Common.Repository.EntityFrameworkCore;
+using System;
 
 namespace Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore
 {

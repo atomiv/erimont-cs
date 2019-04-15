@@ -4,7 +4,7 @@ using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-    public class InventoryTransactionRequestMapping : AutoMapperRequestProfile<InventoryTransaction, InventoryTransactionRequest>
+    public class InventoryTransactionRequestMapping : AutoMapperRequestProfile<InventoryTransactionRequest, InventoryTransaction>
     {
     }
 }

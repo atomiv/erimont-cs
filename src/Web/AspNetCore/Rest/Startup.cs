@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Reflection;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +14,6 @@ using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
 using Optivem.Platform.Core.Common.Mapping;
 using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
-using System.Reflection;
 
 namespace Optivem.Northwind.Web.Rest
 {
@@ -47,9 +48,9 @@ namespace Optivem.Northwind.Web.Rest
 
             services.AddScoped<IMappingService, AutoMapperMappingService>();
 
-            services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
+            // services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
 
-            /*
+
             services.AddAutoMapper(e =>
             {
                 // TODO: VC: This causes exception
@@ -88,8 +89,8 @@ namespace Optivem.Northwind.Web.Rest
 				e.AddProfile(new PurchaseOrderStatusResponseMapping());
 				e.AddProfile(new ShipperRequestMapping());
 				e.AddProfile(new ShipperResponseMapping());
-			});
-            */
+            });
+
 
             // DB Context
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);

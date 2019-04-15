@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Optivem.Platform.Core.Application.Service" Version="1.0.5" />
-    <PackageReference Include="Optivem.Platform.Core.Common.Mapping" Version="1.0.5" />
+    <PackageReference Include="Optivem.Platform.Core.Application.Service" Version="1.0.6" />
+    <PackageReference Include="Optivem.Platform.Core.Common.Mapping" Version="1.0.6" />
   </ItemGroup>
 
   <ItemGroup>

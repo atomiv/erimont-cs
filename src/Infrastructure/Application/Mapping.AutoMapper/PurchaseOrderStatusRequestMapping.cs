@@ -4,7 +4,7 @@ using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
-    public class PurchaseOrderStatusRequestMapping : AutoMapperRequestProfile<PurchaseOrderStatus, PurchaseOrderStatusRequest>
+    public class PurchaseOrderStatusRequestMapping : AutoMapperRequestProfile<PurchaseOrderStatusRequest, PurchaseOrderStatus>
     {
     }
 }

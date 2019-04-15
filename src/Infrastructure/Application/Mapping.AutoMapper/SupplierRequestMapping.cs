@@ -6,13 +6,11 @@ using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
 namespace Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper
 {
     // TODO: VC: Check why not working
-    // public class SupplierRequestMapping : AutoMapperRequestProfile<Supplier, SupplierRequest>
-    public class SupplierRequestMapping : Profile
+    public class SupplierRequestMapping : AutoMapperRequestProfile<SupplierRequest, Supplier>
     {
         public SupplierRequestMapping()
         {
-            this.CreateMap<SupplierRequest, Supplier>()
-                .ForMember(e => e.PurchaseOrder, opt => opt.Ignore());
+            map.ForMember(e => e.PurchaseOrder, opt => opt.Ignore());
         }
     }
 }

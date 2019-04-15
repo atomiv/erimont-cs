@@ -2,18 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Optivem.Northwind.Core.Application.Dto;
-using Optivem.Northwind.Core.Domain.Entity;
 using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
+using Optivem.Northwind.Web.AspNetCore.Rest.Test.Base;
+using Optivem.Northwind.Web.AspNetCore.Rest.Test.Seeders;
 using Optivem.Northwind.Web.Rest;
 using Optivem.Platform.Core.Common.Serialization;
 using Optivem.Platform.Infrastructure.Common.RestClient.Default;
 using Optivem.Platform.Infrastructure.Common.Serialization.Default;
 using Optivem.Platform.Test.Xunit.Web.AspNetCore;
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Reflection;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
 {
@@ -29,9 +28,12 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
             var serializationService = new SerializationService();
 
             SuppliersControllerClient = new SuppliersControllerClient(HttpClient, serializationService);
+            CustomersControllerClient = new CustomersControllerClient(HttpClient, serializationService);
         }
 
         public SuppliersControllerClient SuppliersControllerClient { get; }
+
+        public CustomersControllerClient CustomersControllerClient { get; }
 
         private static IWebHostBuilder CreateWebHostBuilder()
         {
@@ -44,49 +46,39 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
                 .Build();
 
 
-            SeedDatabase(configuration);
+            // TODO: VC: Enable async method, seeding should be moved away from constructor...
+            SeedDatabase(configuration).GetAwaiter().GetResult();
 
             return new WebHostBuilder()
                 .UseStartup<Startup>()
                 .UseConfiguration(configuration);
         }
 
-        private static void SeedDatabase(IConfigurationRoot configuration)
+        private static async Task SeedDatabase(IConfigurationRoot configuration)
         {
             var connection = configuration.GetConnectionString(NorthwindContextConnectionStringKey);
 
             var builder = new DbContextOptionsBuilder<NorthwindContext>()
                 .UseSqlServer(connection);
 
+            var seeders = new List<ISeeder>
+            {
+                new SupplierSeeder(),
+            };
+
             using (var context = new NorthwindContext(builder.Options))
             {
                 context.Database.Migrate();
 
-                var sampleSupplier = new Supplier
+                foreach(var seeder in seeders)
                 {
-                    Id = 0,
-                    Address = "dds",
-                    BusinessPhone = "fffs",
-                    City = "sfsfsf",
-                    Company = "sdfsfs",
-                    HomePhone = "sffsfs",
-                    FaxNumber = "sfsfssf",
-                    CountryRegion = "sffsgklf",
-                    EmailAddress = "sffss",
-                    FirstName = "sfsf",
-                    JobTitle = "sffssf",
-                    LastName = "wrrw",
-                    MobilePhone = "sffgssgs",
-                    Notes = "jkjhkjhfs",
-                    PurchaseOrder = null,
-                    StateProvince = "afffsf",
-                    WebPage = "ooeqeio",
-                    ZipPostalCode = "adad",
-                };
+                    await seeder.SeedAsync(context);
+                }
 
-                context.Supplier.Add(sampleSupplier);
+                await context.SaveChangesAsync();
 
-                context.SaveChanges();
+                // TODO: VC use seeding instead, exlictily settings ids etc
+                // TODO: VC: When running test, ensure to operate on separate parts of data, or create adhoc during test 
             }
         }
     }
@@ -96,6 +88,15 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
     {
         public SuppliersControllerClient(HttpClient client, ISerializationService serializationService) 
             : base(client, "api/suppliers", serializationService)
+        {
+        }
+    }
+
+    public class CustomersControllerClient
+        : RestControllerClient<long, CustomerRequest, CustomerResponse>
+    {
+        public CustomersControllerClient(HttpClient client, ISerializationService serializationService)
+            : base(client, "api/customers", serializationService)
         {
         }
     }
