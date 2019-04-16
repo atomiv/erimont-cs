@@ -5,10 +5,10 @@ services:
   - mssql2017
 
 before_build:
-- cmd: dotnet restore
-- cmd: nuget restore
+- ps: dotnet restore
+- ps: nuget restore
 - ps: Get-Location
-- cmd: configure.ps1
+- ps: .\configure.ps1
 - ps: Get-Location
 
 build:
