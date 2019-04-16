@@ -7,6 +7,7 @@ services:
 before_build:
 - cmd: dotnet restore
 - cmd: nuget restore
+- cmd: .\appveyor.ps1
 
 build:
   verbosity: minimal
