@@ -68,7 +68,7 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
 
             using (var context = new NorthwindContext(builder.Options))
             {
-                context.Database.Migrate();
+                context.Database.EnsureCreated();
 
                 foreach(var seeder in seeders)
                 {
