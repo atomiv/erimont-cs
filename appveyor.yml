@@ -7,6 +7,8 @@ services:
 before_build:
 - cmd: dotnet restore
 - cmd: nuget restore
+- ps: Get-Location
+- cmd: lala.ps1
 - cmd: appveyor.ps1
 
 build:
