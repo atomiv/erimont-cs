@@ -7,7 +7,7 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Base
     public abstract class BaseSeeder<T> : ISeeder
         where T : class
     {
-        public async Task SeedAsync(NorthwindContext context)
+        public void Seed(NorthwindContext context)
         {
             var records = Create();
 
@@ -15,8 +15,9 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Base
             {
                 var dbSet = context.Set<T>();
                 dbSet.Add(record);
-                await context.SaveChangesAsync();
             }
+
+            context.SaveChangesAsync();
         }
 
         protected abstract List<T> Create();

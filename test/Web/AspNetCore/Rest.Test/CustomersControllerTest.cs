@@ -13,7 +13,7 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test
 
         }
 
-        [Fact(Skip = "Should send valid data since address is missing")]
+        [Fact]
         public async Task TestPostAsyncValid()
         {
             var request = new CustomerRequest

@@ -20,6 +20,8 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
     {
         private const string NorthwindContextConnectionStringKey = "Northwind";
 
+        private static object contextLock = new object();
+
         // TODO: VC: Perhaps we could have abstract class for creating webHostBuilder
 
         // TODO: VC: This is duplication - CreateWebHostBuilder
@@ -47,14 +49,14 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
 
 
             // TODO: VC: Enable async method, seeding should be moved away from constructor...
-            SeedDatabase(configuration).GetAwaiter().GetResult();
+            SeedDatabase(configuration);
 
             return new WebHostBuilder()
                 .UseStartup<Startup>()
                 .UseConfiguration(configuration);
         }
 
-        private static async Task SeedDatabase(IConfigurationRoot configuration)
+        private static void SeedDatabase(IConfigurationRoot configuration)
         {
             var connection = configuration.GetConnectionString(NorthwindContextConnectionStringKey);
 
@@ -66,19 +68,26 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures
                 new SupplierSeeder(),
             };
 
-            using (var context = new NorthwindContext(builder.Options))
+            lock(contextLock)
             {
-                context.Database.EnsureCreated();
-
-                foreach(var seeder in seeders)
+                using (var context = new NorthwindContext(builder.Options))
                 {
-                    await seeder.SeedAsync(context);
+                    context.Database.EnsureCreated();
+
+                    // TODO: VC: Seeding not working
+
+                    /*
+                    foreach (var seeder in seeders)
+                    {
+                        seeder.Seed(context);
+                    }
+
+                    context.SaveChanges();
+                    */
+
+                    // TODO: VC use seeding instead, exlictily settings ids etc
+                    // TODO: VC: When running test, ensure to operate on separate parts of data, or create adhoc during test 
                 }
-
-                await context.SaveChangesAsync();
-
-                // TODO: VC use seeding instead, exlictily settings ids etc
-                // TODO: VC: When running test, ensure to operate on separate parts of data, or create adhoc during test 
             }
         }
     }
