@@ -2,6 +2,7 @@
 {
     public class SupplierRequest
     {
+        // TODO: VC: Update base controller to not use id
         public int Id { get; set; }
         public string Company { get; set; }
         public string LastName { get; set; }
