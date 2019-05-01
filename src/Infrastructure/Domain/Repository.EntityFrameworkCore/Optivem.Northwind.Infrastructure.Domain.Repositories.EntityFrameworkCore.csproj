@@ -11,12 +11,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
-    <PackageReference Include="Optivem.Platform.Infrastructure.Common.Repository.EntityFrameworkCore" Version="1.0.6" />
+    <PackageReference Include="Optivem.Framework.Infrastructure.Domain.Repositories.EntityFrameworkCore" Version="1.0.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Domain\Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
-    <ProjectReference Include="..\..\..\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repository.csproj" />
+    <ProjectReference Include="..\..\..\Core\Domain\Entity\Optivem.Northwind.Core.Domain.Entities.csproj" />
+    <ProjectReference Include="..\..\..\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repositories.csproj" />
   </ItemGroup>
   
 </Project>

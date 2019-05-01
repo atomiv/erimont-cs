@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Optivem.Northwind.Core.Application.Service;
-using Optivem.Northwind.Core.Application.Service.Default;
+using Optivem.Northwind.Core.Application.Services;
+using Optivem.Northwind.Core.Application.Services.Default;
 using Optivem.Northwind.Core.Domain.Repository;
 using Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper;
-using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
-using Optivem.Platform.Core.Common.Mapping;
-using Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper;
+using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore;
+using Optivem.Framework.Core.Common.Mapping;
+using Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Optivem.Northwind.Web.Rest

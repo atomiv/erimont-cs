@@ -1,9 +1,9 @@
 ﻿using Optivem.Northwind.Core.Domain.Repository;
-using Optivem.Platform.Core.Common.Repository;
-using Optivem.Platform.Infrastructure.Common.Repository.EntityFrameworkCore;
+using Optivem.Framework.Core.Domain.Repositories;
+using Optivem.Framework.Infrastructure.Domain.Repositories.EntityFrameworkCore;
 using System;
 
-namespace Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore
+namespace Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore
 {
     public class NorthwindUnitOfWork : EntityFrameworkUnitOfWork<NorthwindContext>, INorthwindUnitOfWork
     {

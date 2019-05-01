@@ -1,5 +1,5 @@
 ﻿using Optivem.Northwind.Core.Domain.Entity;
-using Optivem.Platform.Core.Common.Repository;
+using Optivem.Framework.Core.Domain.Repositories;
 
 namespace Optivem.Northwind.Core.Domain.Repository
 {

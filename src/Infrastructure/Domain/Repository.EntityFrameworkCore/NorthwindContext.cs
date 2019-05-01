@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Optivem.Northwind.Core.Domain.Entity;
-using Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuration;
+using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.Configuration;
 
-namespace Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore
+namespace Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore
 {
     public partial class NorthwindContext : DbContext
     {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Optivem.Northwind.Core.Domain.Entity;
 
-namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Configuration
+namespace Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.Configuration
 {
     internal class InventoryTransactionConfiguration : IEntityTypeConfiguration<InventoryTransaction>
     {

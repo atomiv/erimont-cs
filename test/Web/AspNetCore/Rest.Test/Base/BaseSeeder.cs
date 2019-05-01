@@ -1,4 +1,4 @@
-﻿using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
+﻿using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

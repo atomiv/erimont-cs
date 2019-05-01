@@ -1,7 +1,7 @@
 ﻿using Optivem.Northwind.Core.Application.Dto;
-using Optivem.Platform.Core.Application.Service;
+using Optivem.Framework.Core.Application.Services;
 
-namespace Optivem.Northwind.Core.Application.Service
+namespace Optivem.Northwind.Core.Application.Services
 {
     public interface IOrderDetailStatusService : ICrudService<OrderDetailStatusRequest, OrderDetailStatusResponse, int>
     {

@@ -1,6 +1,6 @@
 ﻿using Optivem.Northwind.Core.Application.Dto;
 using Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures;
-using Optivem.Platform.Test.Xunit.Web.AspNetCore;
+using Optivem.Framework.Test.Xunit.Web.AspNetCore;
 using System.Threading.Tasks;
 using Xunit;
 

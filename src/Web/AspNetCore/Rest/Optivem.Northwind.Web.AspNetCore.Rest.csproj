@@ -10,11 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="8.0.0" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-    <PackageReference Include="Optivem.Platform.Web.AspNetCore.Rest" Version="1.0.6" />
+    <PackageReference Include="Optivem.Framework.Web.AspNetCore.Rest" Version="1.0.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
@@ -23,11 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Application\Service.Default\Optivem.Northwind.Core.Application.Service.Default.csproj" />
-    <ProjectReference Include="..\..\..\Core\Application\Service\Optivem.Northwind.Core.Application.Service.csproj" />
-    <ProjectReference Include="..\..\..\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repository.csproj" />
+    <ProjectReference Include="..\..\..\Core\Application\Service.Default\Optivem.Northwind.Core.Application.Services.Default.csproj" />
+    <ProjectReference Include="..\..\..\Core\Application\Service\Optivem.Northwind.Core.Application.Services.csproj" />
+    <ProjectReference Include="..\..\..\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repositories.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\Application\Mapping.AutoMapper\Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\Domain\Repository.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\Domain\Repository.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>

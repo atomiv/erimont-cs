@@ -19,19 +19,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore", "AspNetCore", "{A2179EC1-79EE-4AF6-87D8-229811B744F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Entity", "src\Core\Domain\Entity\Optivem.Northwind.Core.Domain.Entity.csproj", "{07B993D0-0D1C-4D3D-9E4C-FDBE64C0879D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Entities", "src\Core\Domain\Entity\Optivem.Northwind.Core.Domain.Entities.csproj", "{07B993D0-0D1C-4D3D-9E4C-FDBE64C0879D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Repository", "src\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repository.csproj", "{77F9C973-5A06-4418-B8AC-F422276A5E9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Repositories", "src\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repositories.csproj", "{77F9C973-5A06-4418-B8AC-F422276A5E9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Service", "src\Core\Domain\Service\Optivem.Northwind.Core.Domain.Service.csproj", "{88625F36-FB21-473A-8D7F-0E1361C61AE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Services", "src\Core\Domain\Service\Optivem.Northwind.Core.Domain.Services.csproj", "{88625F36-FB21-473A-8D7F-0E1361C61AE7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Dto", "src\Core\Application\Dto\Optivem.Northwind.Core.Application.Dto.csproj", "{6D2397BD-B496-4A45-9E21-A90B04FE31C0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Service", "src\Core\Application\Service\Optivem.Northwind.Core.Application.Service.csproj", "{C1369F77-89A9-473A-AA42-287C90F0B17C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Services", "src\Core\Application\Service\Optivem.Northwind.Core.Application.Services.csproj", "{C1369F77-89A9-473A-AA42-287C90F0B17C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Service.Default", "src\Core\Application\Service.Default\Optivem.Northwind.Core.Application.Service.Default.csproj", "{12596B43-97EA-4E65-B88F-A190F3C9A4BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Services.Default", "src\Core\Application\Service.Default\Optivem.Northwind.Core.Application.Services.Default.csproj", "{12596B43-97EA-4E65-B88F-A190F3C9A4BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore", "src\Infrastructure\Domain\Repository.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore.csproj", "{8A7920BF-1B44-4B34-9F4B-78E724094977}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore", "src\Infrastructure\Domain\Repository.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.csproj", "{8A7920BF-1B44-4B34-9F4B-78E724094977}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper", "src\Infrastructure\Application\Mapping.AutoMapper\Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper.csproj", "{FD7EF4DE-C342-424B-A417-504E07BD48C5}"
 EndProject

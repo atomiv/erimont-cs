@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Migrations
+namespace Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.Migrations
 {
     public partial class Initial : Migration
     {

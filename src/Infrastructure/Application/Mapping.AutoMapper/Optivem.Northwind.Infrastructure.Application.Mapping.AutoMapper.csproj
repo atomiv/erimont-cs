@@ -5,13 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="8.0.0" />
-    <PackageReference Include="Optivem.Platform.Infrastructure.Common.Mapping.AutoMapper" Version="1.0.6" />
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
+    <PackageReference Include="Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper" Version="1.0.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\Application\Dto\Optivem.Northwind.Core.Application.Dto.csproj" />
-    <ProjectReference Include="..\..\..\Core\Domain\Entity\Optivem.Northwind.Core.Domain.Entity.csproj" />
+    <ProjectReference Include="..\..\..\Core\Domain\Entity\Optivem.Northwind.Core.Domain.Entities.csproj" />
   </ItemGroup>
 
 </Project>

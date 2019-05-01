@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Optivem.Northwind.Infrastructure.Domain.Repository.EntityFrameworkCore;
+using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore;
 
-namespace Optivem.Northwind.Infrastructure.Domain.Repository.EFCore.Migrations
+namespace Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(NorthwindContext))]
     partial class NorthwindContextModelSnapshot : ModelSnapshot
