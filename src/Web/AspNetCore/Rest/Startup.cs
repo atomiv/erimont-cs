@@ -48,49 +48,9 @@ namespace Optivem.Northwind.Web.Rest
 
             services.AddScoped<IMappingService, AutoMapperMappingService>();
 
-            // services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
+            services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
 
-
-            services.AddAutoMapper(e =>
-            {
-                // TODO: VC: This causes exception
-
-                e.AddProfile(new SupplierRequestMapping());
-                e.AddProfile(new SupplierResponseMapping());
-				e.AddProfile(new CustomerRequestMapping());
-				e.AddProfile(new CustomerResponseMapping());
-				e.AddProfile(new EmployeeRequestMapping());
-				e.AddProfile(new EmployeeResponseMapping());
-				e.AddProfile(new EmployeePrivilegeRequestMapping());
-				e.AddProfile(new EmployeePrivilegeResponseMapping());
-				e.AddProfile(new InventoryTransactionRequestMapping());
-				e.AddProfile(new InventoryTransactionResponseMapping());
-				e.AddProfile(new InventoryTransactionTypeRequestMapping());
-				e.AddProfile(new InventoryTransactionTypeResponseMapping());
-				e.AddProfile(new InvoiceRequestMapping());
-				e.AddProfile(new InvoiceResponseMapping());
-				e.AddProfile(new OrderDetailRequestMapping());
-				e.AddProfile(new OrderDetailResponseMapping());
-				e.AddProfile(new OrderDetailStatusRequestMapping());
-				e.AddProfile(new OrderDetailStatusResponseMapping());
-				e.AddProfile(new OrderStatusRequestMapping());
-				e.AddProfile(new OrderStatusResponseMapping());
-				e.AddProfile(new OrderTaxStatusRequestMapping());
-				e.AddProfile(new OrderTaxStatusResponseMapping());
-				e.AddProfile(new PrivilegeRequestMapping());
-				e.AddProfile(new PrivilegeResponseMapping());
-				e.AddProfile(new ProductRequestMapping());
-				e.AddProfile(new ProductResponseMapping());
-				e.AddProfile(new PurchaseOrderRequestMapping());
-				e.AddProfile(new PurchaseOrderResponseMapping());
-				e.AddProfile(new PurchaseOrderDetailRequestMapping());
-				e.AddProfile(new PurchaseOrderDetailResponseMapping());
-				e.AddProfile(new PurchaseOrderStatusRequestMapping());
-				e.AddProfile(new PurchaseOrderStatusResponseMapping());
-				e.AddProfile(new ShipperRequestMapping());
-				e.AddProfile(new ShipperResponseMapping());
-            });
-
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             // DB Context
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);
