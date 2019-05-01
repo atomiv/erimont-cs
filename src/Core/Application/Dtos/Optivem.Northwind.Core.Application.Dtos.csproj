@@ -1,7 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="SupplierUseCases\DeleteSupplier\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.3.0" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
+    <PackageReference Include="Optivem.Framework.Core.Common.Mapping" Version="1.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Entities\Optivem.Northwind.Core.Domain.Entities.csproj" />
+    <ProjectReference Include="..\..\Domain\Repositories\Optivem.Northwind.Core.Domain.Repositories.csproj" />
+  </ItemGroup>
 
 </Project>

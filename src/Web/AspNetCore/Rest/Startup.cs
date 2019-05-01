@@ -14,6 +14,7 @@ using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore;
 using Optivem.Framework.Core.Common.Mapping;
 using Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
+using MediatR;
 
 namespace Optivem.Northwind.Web.Rest
 {
@@ -39,6 +40,10 @@ namespace Optivem.Northwind.Web.Rest
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+
+            // MediatR
+
+            services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
             // CORS
 
