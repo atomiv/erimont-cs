@@ -23,11 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Application\Service.Default\Optivem.Northwind.Core.Application.Services.Default.csproj" />
-    <ProjectReference Include="..\..\..\Core\Application\Service\Optivem.Northwind.Core.Application.Services.csproj" />
-    <ProjectReference Include="..\..\..\Core\Domain\Repository\Optivem.Northwind.Core.Domain.Repositories.csproj" />
+    <ProjectReference Include="..\..\..\Core\Application\Dtos\Optivem.Northwind.Core.Application.Dtos.csproj" />
+    <ProjectReference Include="..\..\..\Core\Application\Services.Default\Optivem.Northwind.Core.Application.Services.Default.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\Application\Mapping.AutoMapper\Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\Domain\Repository.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\Domain\Repositories.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>

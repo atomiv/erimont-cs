@@ -1,5 +1,5 @@
 using Bogus;
-using Optivem.Northwind.Core.Application.Dto;
+using Optivem.Northwind.Core.Application.Dtos;
 using Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures;
 using Optivem.Framework.Core.Common.RestClient;
 using Optivem.Framework.Test.Xunit.Web.AspNetCore;

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Optivem.Northwind.Core.Application.Dto;
+using Optivem.Northwind.Core.Application.Dtos;
 using Optivem.Northwind.Core.Application.Services;
-using Optivem.Northwind.Core.Domain.Repository;
+using Optivem.Northwind.Core.Domain.Repositories;
 using Optivem.Framework.Web.AspNetCore.Rest;
 
 namespace Optivem.Northwind.Web.Rest.Controllers

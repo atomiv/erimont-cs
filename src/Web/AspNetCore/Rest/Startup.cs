@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Optivem.Northwind.Core.Application.Services;
 using Optivem.Northwind.Core.Application.Services.Default;
-using Optivem.Northwind.Core.Domain.Repository;
+using Optivem.Northwind.Core.Domain.Repositories;
 using Optivem.Northwind.Infrastructure.Application.Mapping.AutoMapper;
 using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore;
 using Optivem.Framework.Core.Common.Mapping;

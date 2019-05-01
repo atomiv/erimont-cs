@@ -1,4 +1,4 @@
-﻿using Optivem.Northwind.Core.Domain.Entity;
+﻿using Optivem.Northwind.Core.Domain.Entities;
 using Optivem.Northwind.Web.AspNetCore.Rest.Test.Base;
 using System.Collections.Generic;
 
