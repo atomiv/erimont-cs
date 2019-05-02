@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Application\Dtos\Optivem.Northwind.Core.Application.UseCases.csproj" />
+    <ProjectReference Include="..\..\..\Core\Application\UseCases\Optivem.Northwind.Core.Application.UseCases.csproj" />
     <ProjectReference Include="..\..\..\Core\Domain\Entities\Optivem.Northwind.Core.Domain.Entities.csproj" />
   </ItemGroup>
 

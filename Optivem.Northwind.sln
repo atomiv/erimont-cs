@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Doma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Domain.Services", "src\Core\Domain\Services\Optivem.Northwind.Core.Domain.Services.csproj", "{1F15CAB8-9B47-4B18-8452-B3D987284745}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.UseCases", "src\Core\Application\Dtos\Optivem.Northwind.Core.Application.UseCases.csproj", "{FCA4A4AC-766A-4AC4-BD44-2EBACE9D043C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.UseCases", "src\Core\Application\UseCases\Optivem.Northwind.Core.Application.UseCases.csproj", "{FCA4A4AC-766A-4AC4-BD44-2EBACE9D043C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optivem.Northwind.Core.Application.Services", "src\Core\Application\Services\Optivem.Northwind.Core.Application.Services.csproj", "{5BE832D6-BD0D-412E-81A6-8E6ED6D7C81C}"
 EndProject
