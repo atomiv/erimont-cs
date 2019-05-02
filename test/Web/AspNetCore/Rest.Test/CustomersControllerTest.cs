@@ -1,4 +1,4 @@
-﻿using Optivem.Northwind.Core.Application.Dtos;
+﻿using Optivem.Northwind.Core.Application.UseCases;
 using Optivem.Northwind.Web.AspNetCore.Rest.Test.Fixtures;
 using Optivem.Framework.Test.Xunit.Web.AspNetCore;
 using System.Threading.Tasks;

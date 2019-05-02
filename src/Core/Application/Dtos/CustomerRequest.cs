@@ -1,4 +1,4 @@
-﻿namespace Optivem.Northwind.Core.Application.Dtos
+﻿namespace Optivem.Northwind.Core.Application.UseCases
 {
     public class CustomerRequest
     {

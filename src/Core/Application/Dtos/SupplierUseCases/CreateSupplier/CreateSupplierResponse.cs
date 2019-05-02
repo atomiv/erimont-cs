@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplier
+namespace Optivem.Northwind.Core.Application.UseCases.SupplierUseCases.CreateSupplier
 {
     public class CreateSupplierResponse
     {

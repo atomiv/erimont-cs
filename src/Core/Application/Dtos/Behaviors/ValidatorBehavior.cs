@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Optivem.Northwind.Core.Application.Dtos.Behaviors
+namespace Optivem.Northwind.Core.Application.UseCases.Behaviors
 {
+    // TODO: VC: Move into base
     public class ValidatorBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
     {

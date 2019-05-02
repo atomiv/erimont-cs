@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Optivem.Framework.Core.Common.Mapping;
 using Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper;
-using Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplier;
+using Optivem.Northwind.Core.Application.UseCases.SupplierUseCases.CreateSupplier;
 using Optivem.Northwind.Core.Domain.Repositories;
 using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore;
 using System;

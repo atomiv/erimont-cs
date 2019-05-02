@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Optivem.Northwind.Core.Application.Dtos;
+using Optivem.Northwind.Core.Application.UseCases;
 using Optivem.Northwind.Core.Application.Services;
 using Optivem.Northwind.Core.Domain.Repositories;
 using Optivem.Framework.Web.AspNetCore.Rest;
-using Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplier;
+using Optivem.Northwind.Core.Application.UseCases.SupplierUseCases.CreateSupplier;
 using System.Threading.Tasks;
 using MediatR;
 

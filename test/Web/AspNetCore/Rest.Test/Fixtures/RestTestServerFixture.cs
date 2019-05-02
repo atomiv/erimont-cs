@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Optivem.Northwind.Core.Application.Dtos;
+using Optivem.Northwind.Core.Application.UseCases;
 using Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore;
 using Optivem.Northwind.Web.AspNetCore.Rest.Test.Base;
 using Optivem.Northwind.Web.AspNetCore.Rest.Test.Seeders;

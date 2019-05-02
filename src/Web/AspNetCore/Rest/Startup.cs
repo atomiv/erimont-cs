@@ -16,11 +16,11 @@ using Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
 using MediatR;
 using System.Linq;
-using Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplier;
+using Optivem.Northwind.Core.Application.UseCases.SupplierUseCases.CreateSupplier;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 // using static FluentValidation.DependencyInjectionExtensions;
-using Optivem.Northwind.Core.Application.Dtos.Behaviors;
+using Optivem.Northwind.Core.Application.UseCases.Behaviors;
 
 namespace Optivem.Northwind.Web.Rest
 {
@@ -49,7 +49,7 @@ namespace Optivem.Northwind.Web.Rest
             });
 
             var allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
-            // var useCaseAssembly = allAssemblies.Single(e => e.FullName == "Optivem.Northwind.Core.Application.Dtos");
+            // var useCaseAssembly = allAssemblies.Single(e => e.FullName == "Optivem.Northwind.Core.Application.UseCases");
             var useCaseAssembly = typeof(CreateSupplierHandler).Assembly;
 
             // MediatR

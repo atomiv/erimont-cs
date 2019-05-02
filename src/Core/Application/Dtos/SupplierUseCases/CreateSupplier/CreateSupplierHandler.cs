@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplier
+namespace Optivem.Northwind.Core.Application.UseCases.SupplierUseCases.CreateSupplier
 {
     public class CreateSupplierHandler : IRequestHandler<CreateSupplierRequest, CreateSupplierResponse> // : ICustomInteractor<CreateSupplierRequest, CreateSupplierResponse>
     {

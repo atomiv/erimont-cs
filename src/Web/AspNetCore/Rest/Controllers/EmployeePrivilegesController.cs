@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Optivem.Northwind.Core.Application.Dtos;
+using Optivem.Northwind.Core.Application.UseCases;
 using Optivem.Northwind.Core.Application.Services;
 using Optivem.Northwind.Core.Domain.Repositories;
 using Optivem.Framework.Web.AspNetCore.Rest;

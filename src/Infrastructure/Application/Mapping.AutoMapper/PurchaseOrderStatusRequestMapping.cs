@@ -1,4 +1,4 @@
-﻿using Optivem.Northwind.Core.Application.Dtos;
+﻿using Optivem.Northwind.Core.Application.UseCases;
 using Optivem.Northwind.Core.Domain.Entities;
 using Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper;
 
