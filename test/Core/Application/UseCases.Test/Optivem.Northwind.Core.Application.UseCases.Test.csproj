@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\src\Core\Application\Dtos\Optivem.Northwind.Core.Application.Dtos.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Core\Application\Dtos\Optivem.Northwind.Core.Application.UseCases.csproj" />
     <ProjectReference Include="..\..\..\..\src\Infrastructure\Domain\Repositories.EntityFrameworkCore\Optivem.Northwind.Infrastructure.Domain.Repositories.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
