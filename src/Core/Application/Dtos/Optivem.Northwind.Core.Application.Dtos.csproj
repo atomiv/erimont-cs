@@ -6,12 +6,16 @@
 
   <ItemGroup>
     <Folder Include="SupplierUseCases\DeleteSupplier\" />
+    <Folder Include="SupplierUseCases\FindSupplier\" />
+    <Folder Include="SupplierUseCases\FindSuppliers\" />
+    <Folder Include="SupplierUseCases\UpdateSupplier\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="8.3.0" />
     <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="Optivem.Framework.Core.Common.Mapping" Version="1.0.8" />
+    <PackageReference Include="Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper" Version="1.0.8" />
   </ItemGroup>
 
   <ItemGroup>

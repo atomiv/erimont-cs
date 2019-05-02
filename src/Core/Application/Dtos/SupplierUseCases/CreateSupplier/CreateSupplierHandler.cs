@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Optivem.Framework.Core.Common.Mapping;
-using Optivem.Northwind.Core.Application.Dtos.Common;
 using Optivem.Northwind.Core.Domain.Entities;
 using Optivem.Northwind.Core.Domain.Repositories;
 using System;
@@ -24,8 +23,6 @@ namespace Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplie
 
         public async Task<CreateSupplierResponse> Handle(CreateSupplierRequest request, CancellationToken cancellationToken)
         {
-            // TODO: VC: Call the validator, then call mappers, if custom defined, then execute
-
             var entity = _mappingService.Map<CreateSupplierRequest, Supplier>(request);
 
             var repository = _unitOfWork.SupplierRepository;

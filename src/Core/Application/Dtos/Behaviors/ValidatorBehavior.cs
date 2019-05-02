@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace Optivem.Northwind.Core.Application.Dtos.Behaviors
 {
     public class ValidatorBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+        where TRequest : IRequest<TResponse>
     {
         private readonly List<IValidator<TRequest>> _validators;
 

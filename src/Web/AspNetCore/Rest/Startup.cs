@@ -15,6 +15,12 @@ using Optivem.Framework.Core.Common.Mapping;
 using Optivem.Framework.Infrastructure.Common.Mapping.AutoMapper;
 using Swashbuckle.AspNetCore.Swagger;
 using MediatR;
+using System.Linq;
+using Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplier;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+// using static FluentValidation.DependencyInjectionExtensions;
+using Optivem.Northwind.Core.Application.Dtos.Behaviors;
 
 namespace Optivem.Northwind.Web.Rest
 {
@@ -33,7 +39,8 @@ namespace Optivem.Northwind.Web.Rest
         public void ConfigureServices(IServiceCollection services)
         {
             // MVC
-            services.AddMvc();
+            services.AddMvc()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateSupplierValidator>());
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -41,9 +48,18 @@ namespace Optivem.Northwind.Web.Rest
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
 
+            var allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+            // var useCaseAssembly = allAssemblies.Single(e => e.FullName == "Optivem.Northwind.Core.Application.Dtos");
+            var useCaseAssembly = typeof(CreateSupplierHandler).Assembly;
+
             // MediatR
 
-            services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddMediatR(useCaseAssembly);
+            // AddScopedCollection<IValidator>(services, useCaseAssembly);
+            // AddScopedCollection<IValidator>(services, useCaseAssembly);
+            // AddScopedCollection<IValidator>(services, useCaseAssembly);
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidatorBehavior<,>));
+
 
             // CORS
 
@@ -53,9 +69,9 @@ namespace Optivem.Northwind.Web.Rest
 
             services.AddScoped<IMappingService, AutoMapperMappingService>();
 
-            services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
+            // services.AddAutoMapper(Assembly.GetAssembly(typeof(SupplierRequestMapping)));
 
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddAutoMapper(useCaseAssembly);
 
             // DB Context
             var connection = Configuration.GetConnectionString(NorthwindContextConnectionStringKey);
@@ -113,5 +129,18 @@ namespace Optivem.Northwind.Web.Rest
 
             app.UseMvc();
         }
+
+        // TODO: VC: Move to extensions
+        /*
+        private static void AddScopedCollection<T>(this IServiceCollection services, params Assembly[] assemblies)
+        {
+            var types = assemblies.SelectMany(e => e.DefinedTypes.Where(f => f.GetInterfaces().Contains(typeof(T))));
+
+            foreach(var type in types)
+            {
+                services.AddScoped(typeof(T), type);
+            }
+        }
+        */
     }
 }

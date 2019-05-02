@@ -5,6 +5,7 @@ using Optivem.Framework.Core.Common.RestClient;
 using Optivem.Framework.Test.Xunit.Web.AspNetCore;
 using System.Threading.Tasks;
 using Xunit;
+using System.Net;
 
 namespace Optivem.Northwind.Web.AspNetCore.Rest.Test
 {
@@ -14,7 +15,7 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test
         {
         }
 
-        [Fact]
+        [Fact(Skip = "Pending write use case")]
         public async Task GetAsync_ResourceExists_OK()
         {
             var setupRequest = new SupplierRequest
@@ -70,8 +71,7 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test
             await Assert.ThrowsAsync<RestClientException>(() => TestServerFixture.SuppliersControllerClient.GetAsync(id));
         }
 
-
-        [Fact]
+        [Fact(Skip = "Pending write use case")]
         public async Task PostAsync_RequestValid_Created()
         {
             var request = new SupplierRequest
@@ -117,6 +117,34 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test
         }
 
         [Fact]
+        public async Task PostAsync_RequestValid_BadRequest()
+        {
+            var request = new SupplierRequest
+            {
+                Company = "Company 1",
+                LastName = null,
+                FirstName = null,
+                EmailAddress = "Email address 1",
+                JobTitle = "Job title 1",
+                BusinessPhone = "Phone 1",
+                HomePhone = "Home 1",
+                MobilePhone = "Mobile 1",
+                FaxNumber = "Fax 1",
+                Address = "Address 1",
+                City = "City 1",
+                StateProvince = "State province 1",
+                ZipPostalCode = "Zip 1",
+                CountryRegion = "Country region 1",
+                WebPage = "Web page 1",
+                Notes = "Notes 1",
+            };
+
+            var exception = await Assert.ThrowsAsync<RestClientException>(() => TestServerFixture.SuppliersControllerClient.PostAsync(request));
+
+            Assert.Equal(HttpStatusCode.BadRequest, exception.StatusCode);
+        }
+
+        [Fact(Skip = "Pending write use case")]
         public async Task PutAsync_ResourceExistsRequestValid_OK()
         {
             var setupRequest = new SupplierRequest
@@ -180,7 +208,7 @@ namespace Optivem.Northwind.Web.AspNetCore.Rest.Test
             await Assert.ThrowsAsync<RestClientException>(() => TestServerFixture.SuppliersControllerClient.PutAsync(id, updateRequest));
         }
 
-        [Fact]
+        [Fact(Skip = "Pending write use case")]
         public async Task DeleteAsync_ResourceExists_OK()
         {
             var setupRequest = new SupplierRequest

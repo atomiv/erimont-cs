@@ -9,8 +9,8 @@ namespace Optivem.Northwind.Core.Application.Dtos.SupplierUseCases.CreateSupplie
     {
         public CreateSupplierValidator()
         {
-            RuleFor(e => e.FirstName).NotEmpty();
-            RuleFor(e => e.LastName).NotEmpty();
+            RuleFor(e => e.FirstName).NotNull().NotEmpty();
+            RuleFor(e => e.LastName).NotNull().NotEmpty();
         }
     }
 }
