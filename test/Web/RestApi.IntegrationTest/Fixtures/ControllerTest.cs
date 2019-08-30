@@ -16,8 +16,9 @@ namespace Optivem.Northwind.Web.RestApi.IntegrationTest.Fixtures
 
             using (var context = Fixture.Db.CreateContext())
             {
-                context.Customer.RemoveRange(context.Customer);
-                context.Product.RemoveRange(context.Product);
+                context.Customers.RemoveRange(context.Customers);
+                context.Products.RemoveRange(context.Products);
+                context.Suppliers.RemoveRange(context.Suppliers);
                 context.SaveChanges();
             }
         }

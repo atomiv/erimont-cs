@@ -11,10 +11,13 @@ namespace Optivem.Northwind.Web.RestClient.Http
         {
             Customers = new CustomerHttpService(clientFactory);
             Products = new ProductHttpService(clientFactory);
+            Suppliers = new SupplierHttpService(clientFactory);
         }
 
         public ICustomerHttpService Customers { get; }
 
         public IProductHttpService Products { get; }
+
+        public ISupplierHttpService Suppliers { get; }
     }
 }

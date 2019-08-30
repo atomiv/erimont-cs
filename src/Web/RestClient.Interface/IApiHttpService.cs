@@ -5,5 +5,7 @@
         ICustomerHttpService Customers { get; }
 
         IProductHttpService Products { get; }
+
+        ISupplierHttpService Suppliers { get; }
     }
 }

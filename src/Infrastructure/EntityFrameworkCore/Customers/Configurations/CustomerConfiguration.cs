@@ -4,7 +4,7 @@ using Optivem.Northwind.Infrastructure.EntityFrameworkCore.Customers.Records;
 
 namespace Optivem.Northwind.Infrastructure.EntityFrameworkCore.Customers.Configurations
 {
-    public class CustomerRecordConfiguration : IEntityTypeConfiguration<CustomerRecord>
+    public class CustomerConfiguration : IEntityTypeConfiguration<CustomerRecord>
     {
         public void Configure(EntityTypeBuilder<CustomerRecord> builder)
         {

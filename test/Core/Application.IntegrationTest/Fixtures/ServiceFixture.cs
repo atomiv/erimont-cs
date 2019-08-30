@@ -6,6 +6,7 @@ using System;
 using Optivem.Northwind.Core.Application.Customers.Services;
 using Optivem.Northwind.Core.Application.Products.Services;
 using Optivem.Framework.Test.MicrosoftExtensions.Configuration;
+using Optivem.Northwind.Core.Application.Suppliers.Services;
 
 namespace Optivem.Northwind.Core.Application.IntegrationTest.Fixtures
 {
@@ -23,6 +24,7 @@ namespace Optivem.Northwind.Core.Application.IntegrationTest.Fixtures
 
             Customers = GetService<ICustomerService>();
             Products = GetService<IProductService>();
+            Suppliers = GetService<ISupplierService>();
         }
 
         public DbTestClient<DatabaseContext> Db { get; }
@@ -37,6 +39,8 @@ namespace Optivem.Northwind.Core.Application.IntegrationTest.Fixtures
         public ICustomerService Customers { get; }
 
         public IProductService Products { get; }
+
+        public ISupplierService Suppliers { get; }
 
         public void Dispose()
         {
