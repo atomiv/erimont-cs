@@ -1,22 +1,35 @@
-# Optivem Northwind (C#)
+# Erimont
 
-[![Build Status](https://img.shields.io/appveyor/ci/optivem/northwind-dotnetcore.svg)](https://ci.appveyor.com/project/optivem/northwind-dotnetcore)
-[![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+## Prerequisites
 
-Welcome to Optivem Northwind. This project is a reference implementation using Clean Architecture, using the well-known Microsoft Northwind database application.
+The following are the system prerequisites:
 
-## Documentation
+* .NET Core SDK 3.1
+* Visual Studio Community 2019
+* Microsoft SQL Server 2017
+* Microsoft SQL Server Management Studio
+* Postman (optional)
 
-[Northwind C# Documentation](docs/index.html)
+The following need to be installed:
 
-## Issues
+* dotnet tool install --global dotnet-ef --version 3.1
+* dotnet tool install --global dotnet-dev-certs
 
-[Northwind C# Issues](https://github.com/optivem/northwind-dotnetcore/issues)
+Development certificates need to be enabled:
+* dotnet dev-certs https --trust
 
-## License
+If using Postman (optional), then turn off SSL vertification when working locally:
+* File > Settings > SSL certificate verification: OFF
 
-Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php). 
+## Execution
 
-## Copyright
+Execute the following script in powershell:
+.\run.ps1
 
-Copyright © 2018 [Optivem](https://www.optivem.com/) All Rights Reserved. 
+This script will apply database migrations, run the REST API and also start up the swagger page.
+Go to https://localhost:5101/swagger and run some swagger commands.
+
+## Entity Framework
+
+Update database
+dotnet ef database update --project .\src\Tools\Erimont.Tools.Migrator

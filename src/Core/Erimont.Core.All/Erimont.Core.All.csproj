@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Erimont.Core.Application.Interface\Erimont.Core.Application.Interface.csproj" />
+    <ProjectReference Include="..\Erimont.Core.Application\Erimont.Core.Application.csproj" />
+    <ProjectReference Include="..\Erimont.Core.Common\Erimont.Core.Common.csproj" />
+    <ProjectReference Include="..\Erimont.Core.Domain\Erimont.Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
